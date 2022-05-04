@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
+import fontsizes from '../../styles/fontsizes'
+import fontstyles from '../../styles/fontstyles'
 
 const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
@@ -12,10 +14,12 @@ const GlobalStyles = createGlobalStyle`
     color: black;
     width: 100%;
     max-width: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
   }
   body {
+    ${fontsizes.root}
+    ${fontstyles.root}
     text-rendering: optimizeLegibility;
     overflow: -moz-scrollbars-vertical;
     overflow: hidden;
@@ -38,6 +42,8 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   h1, h2, h3, h4, h5, h6, p, ul, ol, input, textarea, button {
+    ${fontsizes.root}
+    ${fontstyles.root}
     margin: .4em 0;
   }
 `
