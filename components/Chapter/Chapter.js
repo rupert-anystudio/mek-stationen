@@ -29,10 +29,9 @@ const Quote = styled.div`
 `
 
 const Chapter = ({ titleParts, content }) => {
-  if (titleParts.length < 1) return null
   return (
     <Wrap>
-      <SkewedTitleSheet parts={titleParts} />
+      {titleParts.length > 0 && <SkewedTitleSheet parts={titleParts} />}
       {content.map(({ type, value, key }) => {
         if (type === 'text') return <Text key={key}>{value}</Text>
         if (type === 'quote') return <Quote key={key}>{value}</Quote>

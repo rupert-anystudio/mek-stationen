@@ -41,8 +41,8 @@ const SkewedTitleSheet = ({ parts = [] }) => (
   <Wrap>
     <Center>
       <Skew>
-        {parts.map(({ offset, value }) => (
-          <Part offset={offset}>{value}</Part>
+        {parts.map(({ key, offset, value }) => (
+          <Part key={key} offset={offset}>{value}</Part>
         ))}
       </Skew>
     </Center>

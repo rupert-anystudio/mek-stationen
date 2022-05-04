@@ -1,7 +1,10 @@
 import useAppContext from '../AppContext/useAppContext'
 import Chapter from './Chapter'
 
-const returnTitleParts = (chapter, currentLang) => chapter?.titleParts[currentLang] || chapter?.titleParts.de || []
+const returnTitleParts = (chapter, currentLang) => {
+  const parts = chapter?.titleParts[currentLang] || chapter?.titleParts.de || []
+  return parts.map((part, index) => ({ key: `${currentLang}-${index}`, ...part }))
+}
 
 const returnContent = (chapter, currentLang) => (chapter?.content || []).map(({ type, value }, index) => ({
   key: `${type}-${index}`,
