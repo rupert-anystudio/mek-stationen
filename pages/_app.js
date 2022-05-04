@@ -5,11 +5,13 @@ import GlobalStyles from '../components/GlobalStyles'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import AppContextProvider from '../components/AppContext/AppContextProvider'
 
 function MyApp({ Component, pageProps }) {
   const title = 'MEK Station'
+  const chapters = pageProps?.chapters || []
   return (
-    <>
+    <AppContextProvider data={{ chapters }}>
       <GlobalStyles />
       <Head>
         <title>{title}</title>
@@ -19,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Main>
       <Footer />
-    </>
+    </AppContextProvider>
   )
 }
 
