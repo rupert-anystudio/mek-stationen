@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-  margin: 0;
   padding: 0;
   position: relative;
   width: 100%;
   height: 100vh;
   background: black;
   color: white;
+  margin: 0 auto 17rem auto;
 `
 
 const Center = styled.div`
@@ -21,7 +21,7 @@ const Skew = styled.div`
   margin: 0;
   padding: 0;
   position: relative;
-  transform: skewY(333deg) scaleX(0.8);
+  transform: skewY(-29.5deg) scaleX(0.8);
 `
 
 const Part = styled.div`

@@ -1,10 +1,20 @@
 import useAppContext from '../AppContext/useAppContext'
 import Chapter from './Chapter'
 
-const ChapterContainer = ({ title, titleSkewed }) => {
+const returnTitleParts = (chapter, currentLang) => chapter?.titleParts[currentLang] || chapter?.titleParts.de || []
+
+const returnContent = (chapter, currentLang) => (chapter?.content || []).map(({ type, value }, index) => ({
+  key: `${type}-${index}`,
+  type,
+  value: value[currentLang] || value.de || ''
+}))
+
+const ChapterContainer = (chapter) => {
   const { currentLang } = useAppContext()
+  const titleParts = returnTitleParts(chapter, currentLang)
+  const content = returnContent(chapter, currentLang)
   return (
-    <Chapter titleSkewed={titleSkewed[currentLang]} title={title} />
+    <Chapter titleParts={titleParts} content={content} />
   )
 }
 

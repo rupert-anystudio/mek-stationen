@@ -8,12 +8,36 @@ const Wrap = styled.div`
   width: 100%;
 `
 
-const Chapter = ({ titleSkewed }) => {
-  console.log('titleSkewed', titleSkewed)
-  if (titleSkewed.length < 1) return null
+const Text = styled.div`
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-width: 110rem;
+  font-size: 3.8rem;
+  line-height: 5.3rem;
+  margin: 0 auto 23rem auto;
+`
+
+const Quote = styled.div`
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-width: 110rem;
+  font-size: 5.5rem;
+  line-height: 7rem;
+  margin: 0 auto 10rem auto;
+`
+
+const Chapter = ({ titleParts, content }) => {
+  if (titleParts.length < 1) return null
   return (
     <Wrap>
-      <SkewedTitleSheet parts={titleSkewed} />
+      <SkewedTitleSheet parts={titleParts} />
+      {content.map(({ type, value, key }) => {
+        if (type === 'text') return <Text key={key}>{value}</Text>
+        if (type === 'quote') return <Quote key={key}>{value}</Quote>
+        return null
+      })}
     </Wrap>
   )
 }
