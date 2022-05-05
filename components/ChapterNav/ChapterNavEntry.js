@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { css } from 'styled-components'
 
 const Wrap = styled.div`
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -8,9 +10,11 @@ const Wrap = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 `
 
 const Index = styled.div`
+  position: relative;
   width: 4rem;
   height: 4rem;
   background: white;
@@ -23,6 +27,21 @@ const Index = styled.div`
   font-size: 2.7rem;
   line-height: 1em;
   font-weight: bold;
+  background: ${props => props.isInverted ? 'black' : 'white'};
+  color: ${props => props.isInverted ? 'white' : 'black'};
+  ${props => props.hasCircle && css`
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5.5rem;
+      height: 5.5rem;
+      transform: translateX(-50%) translateY(-50%);
+      border: 2px dotted black;
+      border-radius: 50%;
+    }
+  `}
 `
 
 const Title = styled.div`
@@ -32,13 +51,13 @@ const Title = styled.div`
   font-weight: bold;
 `
 
-const Chapter = ({ title, index }) => {
+const ChapterNavEntry = ({ title, index, isActive, isCurrent, onClick, wrapRef }) => {
   return (
-    <Wrap>
-      <Index>{index}</Index>
+    <Wrap onClick={onClick} ref={wrapRef}>
+      <Index isInverted={isActive} hasCircle={isCurrent}>{index}</Index>
       <Title>{title}</Title>
     </Wrap>
   )
 }
 
-export default Chapter
+export default ChapterNavEntry

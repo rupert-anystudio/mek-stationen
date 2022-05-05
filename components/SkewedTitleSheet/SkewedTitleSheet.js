@@ -5,15 +5,16 @@ const Wrap = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  background: black;
-  color: white;
-  margin: 0 auto 17rem auto;
+  margin: 0 0 17rem 0;
+  overflow: hidden;
 `
 
 const Center = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  height: 100%;
   transform: translateX(-50%) translateY(-50%);
 `
 
@@ -21,7 +22,10 @@ const Skew = styled.div`
   margin: 0;
   padding: 0;
   position: relative;
+  width: 100%;
+  height: 100%;
   transform: skewY(-29.5deg) scaleX(0.8);
+  transform-origin: 50% 50%;
 `
 
 const Part = styled.div`

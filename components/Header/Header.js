@@ -21,7 +21,7 @@ const Content = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 6rem;
 `
 
 const Header = () => {

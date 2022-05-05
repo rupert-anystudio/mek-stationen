@@ -5,7 +5,9 @@ import GlobalStyles from '../components/GlobalStyles'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import Chapters from '../components/Chapters'
 import AppContextProvider from '../components/AppContext/AppContextProvider'
+import Devbar from '../components/Devbar'
 
 function MyApp({ Component, pageProps }) {
   const title = 'MEK Station'
@@ -16,8 +18,10 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>{title}</title>
       </Head>
+      <Devbar />
       <Header />
       <Main>
+        <Chapters chapters={chapters} />
         <Component {...pageProps} />
       </Main>
       <Footer />

@@ -1,11 +1,5 @@
-import Chapters from '../components/Chapters'
-
 export default function Home({ chapters }) {
-  return (
-    <>
-      <Chapters chapters={chapters} />
-    </>
-  )
+  return null
 }
 
 export async function getStaticProps() {

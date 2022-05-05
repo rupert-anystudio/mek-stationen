@@ -13,6 +13,7 @@ const langs = [
 ]
 
 const AppContextProvider = ({ children, data }) => {
+  const [chapterIndex, setChapterIndex] = useState(0)
   const [currentLang, setCurrentLang] = useState(langs[0].key)
   return (
     <AppContext.Provider
@@ -20,6 +21,8 @@ const AppContextProvider = ({ children, data }) => {
         langs,
         currentLang,
         setCurrentLang,
+        chapterIndex,
+        setChapterIndex,
         ...data,
       }}
     >
