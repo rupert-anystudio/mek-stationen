@@ -1,40 +1,28 @@
 import styled from 'styled-components'
 import SkewedTitleSheet from '../SkewedTitleSheet'
+import Text from './contentBlocks/Text'
+import Quote from './contentBlocks/Quote'
+import Images from './contentBlocks/Images'
+import Fixed from './contentBlocks/Fixed'
 
 const Wrap = styled.div`
   margin: 0;
   padding: 0;
   position: relative;
   width: 100%;
+  border-bottom: 1px solid currentColor;
+  min-height: 150vh;
 `
 
-const Text = styled.div`
-  padding: 0;
-  position: relative;
-  width: 100%;
-  max-width: 110rem;
-  font-size: 3.8rem;
-  line-height: 5.3rem;
-  margin: 0 auto 23rem auto;
-`
-
-const Quote = styled.div`
-  padding: 0;
-  position: relative;
-  width: 100%;
-  max-width: 110rem;
-  font-size: 5.5rem;
-  line-height: 7rem;
-  margin: 0 auto 10rem auto;
-`
-
-const Chapter = ({ titleParts, content }) => {
+const Chapter = ({ titleParts, content, wrapRef, id }) => {
   return (
-    <Wrap>
+    <Wrap ref={wrapRef} id={id}>
       {titleParts.length > 0 && <SkewedTitleSheet parts={titleParts} />}
-      {content.map(({ type, value, key }) => {
-        if (type === 'text') return <Text key={key}>{value}</Text>
-        if (type === 'quote') return <Quote key={key}>{value}</Quote>
+      {content.map(({ type, key, ...rest }) => {
+        if (type === 'text') return <Text key={key} {...rest} />
+        if (type === 'quote') return <Quote key={key} {...rest} />
+        if (type === 'images') return <Images key={key} {...rest} />
+        if (type === 'fixed') return <Fixed key={key} {...rest} />
         return null
       })}
     </Wrap>

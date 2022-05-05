@@ -3,7 +3,7 @@ import PillButton from '../PillButton'
 
 const Wrap = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;

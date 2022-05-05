@@ -13,8 +13,6 @@ const Center = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
   transform: translateX(-50%) translateY(-50%);
 `
 
@@ -32,7 +30,7 @@ const Part = styled.div`
   margin: 0;
   padding: 0;
   position: relative;
-  font-size: 8vw;
+  font-size: 6vw;
   line-height: 1;
   text-transform: uppercase;
   font-weight: bold;

@@ -6,7 +6,7 @@ const ChapterNavContainer = () => {
   const { chapters, setChapterIndex, chapterIndex } = useAppContext()
 
   const handleChapterClick = useCallback(index => {
-    setChapterIndex(index)
+    // setChapterIndex(index)
   }, [setChapterIndex])
 
   return (

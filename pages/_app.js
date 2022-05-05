@@ -10,10 +10,13 @@ import AppContextProvider from '../components/AppContext/AppContextProvider'
 import Devbar from '../components/Devbar'
 
 function MyApp({ Component, pageProps }) {
-  const title = 'MEK Station'
-  const chapters = pageProps?.chapters || []
+  const {
+    chapters = [],
+    title = 'MEK Station',
+    assetFolder,
+  } = pageProps
   return (
-    <AppContextProvider data={{ chapters }}>
+    <AppContextProvider data={{ chapters, assetFolder }}>
       <GlobalStyles />
       <Head>
         <title>{title}</title>
@@ -21,7 +24,7 @@ function MyApp({ Component, pageProps }) {
       <Devbar />
       <Header />
       <Main>
-        <Chapters chapters={chapters} />
+        <Chapters />
         <Component {...pageProps} />
       </Main>
       <Footer />

@@ -9,20 +9,20 @@ const Wrap = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 `
 
 const ChapterNav = ({ chapters = [], onChapterClick, chapterIndex }) => {
   return (
     <Wrap>
-      {chapters.map(({ key, title }, i) => {
-        const index = i + 1
+      {chapters.map(({ key, title, index, id }) => {
         return (
           <ChapterNavEntry
             key={key}
             title={title}
             index={index}
             onClick={() => onChapterClick(index)}
+            href={`#${id}`}
             isActive={index <= chapterIndex}
             isCurrent={index === chapterIndex}
           />

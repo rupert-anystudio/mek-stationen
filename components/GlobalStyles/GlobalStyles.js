@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
   body, html, #__next {
     background: white;
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     overflow: -moz-scrollbars-vertical;
     overflow: hidden;
     overflow-y: scroll;
-    scroll-behavior: smooth;
+    background:black;
   }
   #__next {
     flex: 1;
@@ -34,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
     align-items: stretch;
     margin: 0 auto;
     min-height: 100vh;
+    /* max-width: 192rem; */
+    margin: 0 auto;
   }
   a {
     color: inherit;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
-const Wrap = styled.div`
+const Wrap = styled.a`
   position: relative;
   margin: 0;
   padding: 0;
@@ -11,6 +11,9 @@ const Wrap = styled.div`
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 const Index = styled.div`
@@ -49,11 +52,12 @@ const Title = styled.div`
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  width: 18rem;
 `
 
-const ChapterNavEntry = ({ title, index, isActive, isCurrent, onClick, wrapRef }) => {
+const ChapterNavEntry = ({ title, index, isActive, isCurrent, onClick, wrapRef, href }) => {
   return (
-    <Wrap onClick={onClick} ref={wrapRef}>
+    <Wrap onClick={onClick} ref={wrapRef} href={href}>
       <Index isInverted={isActive} hasCircle={isCurrent}>{index}</Index>
       <Title>{title}</Title>
     </Wrap>

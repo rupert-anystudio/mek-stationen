@@ -1,23 +1,44 @@
+import { useCallback, useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import useAppContext from '../AppContext/useAppContext'
 import Chapter from './Chapter'
 
-const returnTitleParts = (chapter, currentLang) => {
-  const parts = chapter?.titleParts[currentLang] || chapter?.titleParts.de || []
-  return parts.map((part, index) => ({ key: `${currentLang}-${index}`, ...part }))
-}
+gsap.registerPlugin(ScrollTrigger)
 
-const returnContent = (chapter, currentLang) => (chapter?.content || []).map(({ type, value }, index) => ({
-  key: `${type}-${index}`,
-  type,
-  value: value[currentLang] || value.de || ''
-}))
+const ChapterContainer = ({ index, titleParts, content, id }) => {
+  const { setChapterIndex } = useAppContext()
 
-const ChapterContainer = (chapter) => {
-  const { currentLang } = useAppContext()
-  const titleParts = returnTitleParts(chapter, currentLang)
-  const content = returnContent(chapter, currentLang)
+  const wrapRef = useRef(null)
+  const gsapRef = useRef({})
+
+  const handleComponentEnter = useCallback(() => {
+    setChapterIndex(index)
+  }, [index, setChapterIndex])
+
+  useEffect(() => {
+    gsapRef.current.trigger = ScrollTrigger.create({
+      trigger: wrapRef.current,
+      start: 'top center',
+      end: 'bottom center',
+      markers: false,
+      onEnter: handleComponentEnter,
+      onEnterBack: handleComponentEnter,
+    })
+    return () => {
+      Object.values(gsapRef.current).forEach(anim => anim.kill())
+      gsapRef.current = {}
+    }
+  }, [handleComponentEnter])
+
   return (
-    <Chapter titleParts={titleParts} content={content} />
+    <Chapter
+      titleParts={titleParts}
+      content={content}
+      wrapRef={wrapRef}
+      id={id}
+    />
   )
 }
 
