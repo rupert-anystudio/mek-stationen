@@ -12,9 +12,22 @@ const Wrap = styled.div`
   gap: 1rem;
 `
 
-const ChapterNav = ({ chapters = [], onChapterClick, chapterIndex }) => {
+const Label = styled.div`
+  font-size: 3.2rem;
+  font-weight: bold;
+  padding: 1.1rem 0;
+  white-space: pre;
+`
+
+const ChapterNav = ({ 
+  chapters = [],
+  onChapterClick,
+  chapterIndex,
+  navLabel,
+}) => {
   return (
     <Wrap>
+      <Label>{navLabel}</Label>
       {chapters.map(({ key, title, index, id }) => {
         return (
           <ChapterNavEntry

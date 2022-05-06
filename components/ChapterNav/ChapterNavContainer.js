@@ -3,7 +3,7 @@ import useAppContext from '../AppContext/useAppContext'
 import ChapterNav from './ChapterNav'
 
 const ChapterNavContainer = () => {
-  const { chapters, setChapterIndex, chapterIndex } = useAppContext()
+  const { chapters, setChapterIndex, chapterIndex, globals } = useAppContext()
 
   const handleChapterClick = useCallback(index => {
     // setChapterIndex(index)
@@ -14,6 +14,7 @@ const ChapterNavContainer = () => {
       chapters={chapters}
       onChapterClick={handleChapterClick}
       chapterIndex={chapterIndex}
+      navLabel={globals.chapterNavLabel}
     />
   )
 }

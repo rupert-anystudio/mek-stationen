@@ -1,15 +1,10 @@
 import useAppContext from '../AppContext/useAppContext'
 import PillButton from '../PillButton'
 
-const labels = {
-  de: 'Zurück zum Anfang',
-  en: 'Back to start',
-}
-
 const BackToStart = () => {
-  const { currentLang } = useAppContext()
+  const { globals } = useAppContext()
   return (
-    <PillButton label={labels[currentLang]} />
+    <PillButton label={globals.backToStart} />
   )
 }
 

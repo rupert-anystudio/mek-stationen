@@ -1,8 +1,10 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useState } from 'react'
+import useAppContext from '../../../../AppContext/useAppContext'
 import useResizeObserver from '../../../../useResizeObserver'
 import Item from './Item'
 
 const ItemContainer = props => {
+  const { globals } = useAppContext()
   const [captionHeight, setCaptionHeight] = useState(0)
 
   const onResize = useCallback(({ height }) => {
@@ -16,6 +18,7 @@ const ItemContainer = props => {
       {...props}
       captionRef={ref}
       captionHeight={captionHeight}
+      captionToggleLabel={globals.captionToggle}
     />
   )
 }

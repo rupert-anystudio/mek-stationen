@@ -1,17 +1,9 @@
 import { useState } from 'react'
+import langs from '../../lib/languages'
+import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'
+import translateGlobals from '../../lib/translateGlobals'
 import AppContext from './AppContext'
-
-const langs = [
-  {
-    key: 'de',
-    label: 'Deutsch',
-  },
-  {
-    key: 'en',
-    label: 'English',
-  },
-]
 
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
@@ -20,6 +12,7 @@ const AppContextProvider = ({ children, data }) => {
   const chaptersRaw = data?.chapters || []
   const assetFolder = data?.assetFolder || ''
   const chapters = translateChapters(chaptersRaw, currentLang, assetFolder)
+  const globals = translateGlobals(globalsRaw, currentLang)
   
   return (
     <AppContext.Provider
@@ -30,6 +23,7 @@ const AppContextProvider = ({ children, data }) => {
         chapterIndex,
         setChapterIndex,
         chapters,
+        globals,
       }}
     >
       {children}

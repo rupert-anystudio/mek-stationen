@@ -55,6 +55,7 @@ const Item = ({
   showCaption,
   captionRef,
   captionHeight,
+  captionToggleLabel,
 }) => {
   return (
     <Wrap>
@@ -63,7 +64,11 @@ const Item = ({
       </CaptionWrap>
       <ImageWrap style={{ transform: `translateY(${showCaption ? -captionHeight : 0}px)` }}>
         <Img src={src} />
-        <CaptionButton label="Bildinfos" onClick={onCaptionShowClick} isActive={showCaption} />
+        <CaptionButton
+          label={captionToggleLabel}
+          onClick={onCaptionShowClick}
+          isActive={showCaption}
+        />
       </ImageWrap>
     </Wrap>
   )
