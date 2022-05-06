@@ -33,6 +33,8 @@ const Images = ({ images }) => {
         slidesPerView={'auto'}
         spaceBetween={56}
         centeredSlides
+        preloadImages
+        grabCursor
       >
         {images.map(image => (
           <SwiperSlide key={image.key}>
