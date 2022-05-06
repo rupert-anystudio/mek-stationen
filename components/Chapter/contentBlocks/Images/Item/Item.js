@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import PillButton from '../../../PillButton'
+import PillButton from '../../../../PillButton'
 
-const ItemWrap = styled.div`
+const Wrap = styled.div`
   height: 100%;
   width: auto;
   position: relative;
@@ -26,10 +26,17 @@ const CaptionButton = styled(PillButton)`
   right: 2rem;
 `
 
-const Caption = styled.div`
+const CaptionWrap = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+`
+
+const Caption = styled.div`
+  position: relative;
   width: 100%;
   background: black;
   color: white;
@@ -39,16 +46,26 @@ const Caption = styled.div`
   cursor: pointer;
 `
 
-const ImagesItem = ({ src, value, onCaptionShowClick, onCaptionHideClick, showCaption }) => {
+const Item = ({
+  src,
+  value,
+  onCaptionShowClick,
+  onCaptionHideClick,
+  showCaption,
+  captionRef,
+  captionHeight,
+}) => {
   return (
-    <ItemWrap>
-      <Caption onClick={onCaptionHideClick}>{value}</Caption>
-      <ImageWrap style={{ transform: `translateY(${showCaption ? -150 : 0}px)` }}>
+    <Wrap>
+      <CaptionWrap ref={captionRef}>
+        <Caption onClick={onCaptionHideClick}>{value}</Caption>
+      </CaptionWrap>
+      <ImageWrap style={{ transform: `translateY(${showCaption ? -captionHeight : 0}px)` }}>
         <Img src={src} />
         <CaptionButton label="Bildinfos" onClick={onCaptionShowClick} isActive={showCaption} />
       </ImageWrap>
-    </ItemWrap>
+    </Wrap>
   )
 }
 
-export default ImagesItem
+export default Item

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Swiper as ReactSwiper, SwiperSlide } from 'swiper/react'
-import ImagesItem from './ImagesItem'
+import Item from './Item'
 
 import 'swiper/css'
 
@@ -36,7 +36,7 @@ const Images = ({ images }) => {
       >
         {images.map(image => (
           <SwiperSlide key={image.key}>
-            <ImagesItem {...image} />
+            <Item {...image} />
           </SwiperSlide>
         ))}
       </ReactSwiper>
