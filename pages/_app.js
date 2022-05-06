@@ -7,7 +7,7 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 import Chapters from '../components/Chapters'
 import AppContextProvider from '../components/AppContext/AppContextProvider'
-import Devbar from '../components/Devbar'
+// import Devbar from '../components/Devbar'
 
 function MyApp({ Component, pageProps }) {
   const {
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <Devbar />
+      {/* <Devbar /> */}
       <Header />
       <Main>
         <Chapters />
