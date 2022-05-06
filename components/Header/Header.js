@@ -3,16 +3,6 @@ import BackToStart from '../BackToStart'
 import ChapterNav from '../ChapterNav'
 import LanguageSwitch from '../LanguageSwitch'
 
-const Intro = styled.div`
-  flex: 0 0 auto;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
-  background: black;
-  height: 80vh;
-`
-
 const Wrap = styled.header`
   flex: 0 0 auto;
   width: 100%;
@@ -22,6 +12,8 @@ const Wrap = styled.header`
   border-bottom: 2px solid currentColor;
   z-index: 100;
   background: white;
+  transform: translateY(${props => props.isHidden ? -100 : 0}%);
+  transition: transform 0.3s ease-in-out;
 `
 
 const Content = styled.div`
@@ -34,11 +26,10 @@ const Content = styled.div`
   gap: 6rem;
 `
 
-const Header = () => {
+const Header = ({ isHidden, isCollapsed }) => {
   return (
     <>
-      {/* <Intro /> */}
-      <Wrap>
+      <Wrap isHidden={isHidden}>
         <Content>
           <LanguageSwitch />
           <ChapterNav />
