@@ -8,6 +8,8 @@ import AppContext from './AppContext'
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
   const [currentLang, setCurrentLang] = useState(langs[0].key)
+  const [headerIsCollapsed, setHeaderIsCollapsed] = useState(false)
+  const [headerIsHidden, setHeaderIsHidden] = useState(false)
 
   const chaptersRaw = data?.chapters || []
   const assetFolder = data?.assetFolder || ''
@@ -18,12 +20,16 @@ const AppContextProvider = ({ children, data }) => {
     <AppContext.Provider
       value={{
         langs,
+        chapters,
+        globals,
         currentLang,
         setCurrentLang,
         chapterIndex,
         setChapterIndex,
-        chapters,
-        globals,
+        headerIsCollapsed,
+        setHeaderIsCollapsed,
+        headerIsHidden,
+        setHeaderIsHidden,
       }}
     >
       {children}
