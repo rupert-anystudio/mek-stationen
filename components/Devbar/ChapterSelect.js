@@ -3,11 +3,12 @@ import useAppContext from '../AppContext/useAppContext'
 
 const ChapterSelect = () => {
   const { chapters, chapterIndex, setChapterIndex } = useAppContext()
+
   const handleChange = useCallback(e => {
     const value = parseInt(e.target.value)
-    console.log('handleChange', value)
     setChapterIndex(value)
   }, [setChapterIndex])
+  
   return (
     <div>
       <select value={chapterIndex} onChange={handleChange}>

@@ -107,7 +107,7 @@ const props = {
               },
             },
             {
-              src: 'Kapitel 2 Wie alles D.jpg',
+              src: 'Kapitel 2 Wie alles D.png',
               value: {
                 de: `Schwarz-Weiß-Porträtfoto eines Mädchens und eines Jungen, Lily Faulkner Studio, um 1900\n© Pioneer Photos - Lucy Rennie, Howard Black & J. P. Johnstone History`,
               },
@@ -136,13 +136,13 @@ const props = {
               },
             },
             {
-              src: 'Kapitel 2 Wie alles G.jpg',
+              src: 'Kapitel 2 Wie alles G.jpeg',
               value: {
                 de: `James Brown, The Original Disco Man, 1978\n© Polydor Records`,
               },
             },
             {
-              src: 'Kapitel 2 Wie alles G.jpg',
+              src: 'Kapitel 2 Wie alles H.jpg',
               value: {
                 de: `Funkadelic: Uncle Jam Wants You, 1979, Artwork\n© Diem M. Jones`,
               },
@@ -285,7 +285,7 @@ const props = {
               },
             },
             {
-              src: 'Kapitel 4 Koloniale B.jpg',
+              src: 'Kapitel 4 Koloniale B.jpeg',
               value: {
                 de: `Bei der Einweihung der Skulptur „I am Queen Mary“ vor dem ehemaligen Lagergebäude der Dänischen Westindienkompanie im Hafen von Kopenhagen, heute die „Royal Casting Collection“ am 31. März 2018,\n© Sarah Giersing`,
               },
@@ -342,7 +342,7 @@ const props = {
               },
             },
             {
-              src: 'Kapitel 4 Koloniale E.jpg',
+              src: 'Kapitel 4 Koloniale E.jpeg',
               value: {
                 de: `Model Claudia Schiffer auf dem Cover des ZEITmagazins Nr. 42, 2010© Frederike Helwig/ ZEITmagazin`,
               },

@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const withTM = require('next-transpile-modules')(['gsap'])
+const withTM = require('next-transpile-modules')(['gsap', 'swiper'])
 
 const nextConfig = {
   reactStrictMode: true,

@@ -5,6 +5,7 @@ const Wrap = styled.div`
   width: 100%;
   height: 200vh;
   background: black;
+  margin: 0 0 17rem 0;
 `
 
 const Sticky = styled.div`

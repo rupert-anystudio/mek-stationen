@@ -16,9 +16,20 @@ const Wrap = styled.button`
   letter-spacing: -0.02em;
 `
 
-const PillButton = ({ label, onClick,isActive }) => {
+const PillButton = ({
+  label,
+  onClick,
+  isActive,
+  style,
+  className,
+}) => {
   return (
-    <Wrap onClick={onClick} isActive={isActive}>
+    <Wrap
+      onClick={onClick}
+      isActive={isActive}
+      className={className}
+      style={style}
+    >
       {label}
     </Wrap>
   )
