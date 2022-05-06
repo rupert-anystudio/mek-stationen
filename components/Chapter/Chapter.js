@@ -10,8 +10,8 @@ const Wrap = styled.div`
   padding: 0;
   position: relative;
   width: 100%;
-  border-bottom: 1px solid currentColor;
   min-height: 150vh;
+  background: white;
 `
 
 const Chapter = ({ titleParts, content, wrapRef, id }) => {

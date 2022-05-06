@@ -1,17 +1,25 @@
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-  padding: 0;
+  padding: 0 0 23rem 0;
+  /* padding: 10rem 0; */
   position: relative;
   width: 100%;
-  max-width: 110rem;
-  font-size: 3.8rem;
-  line-height: 5.3rem;
-  margin: 0 auto 23rem auto;
+  margin: 0;
+  background: white;
+  p {
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+    font-size: 3.8rem;
+    line-height: 5.3rem;
+  }
 `
 
 const Text = ({ value }) => (
-  <Wrap>{value}</Wrap>
+  <Wrap>
+    <p>{value}</p>
+  </Wrap>
 )
 
 export default Text

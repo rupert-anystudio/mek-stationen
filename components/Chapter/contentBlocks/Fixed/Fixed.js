@@ -3,9 +3,24 @@ import styled from 'styled-components'
 const Wrap = styled.div`
   position: relative;
   width: 100%;
-  height: 200vh;
+  height: auto;
+  margin: 0;
+  &:after {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    display: block;
+    background: white;
+  }
+`
+
+const Rail = styled.div`
+  position: relative;
   background: black;
-  margin: 0 0 17rem 0;
+  width: 100%;
+  height: 200vh;
+  margin: 0 0 -100vh 0;
 `
 
 const Sticky = styled.div`
@@ -49,11 +64,13 @@ const ImageColumn = ({ src, value }) => {
 const Fixed = ({ image, coverImage, value }) => {
   return (
     <Wrap>
-      <Sticky>
-        {image && (
-          <ImageColumn {...image} />
-        )}
-      </Sticky>
+      <Rail>
+        <Sticky>
+          {image && (
+            <ImageColumn {...image} />
+          )}
+        </Sticky>
+      </Rail>
     </Wrap>
   )
 }

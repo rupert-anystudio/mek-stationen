@@ -10,6 +10,7 @@ const Wrap = styled.div`
   width: 100%;
   height: 80vh;
   margin: 0 0 17rem 0;
+  background: white;
   .swiper {
     width: 100%;
     height: 100%;
