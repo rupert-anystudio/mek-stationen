@@ -44,7 +44,7 @@ const Caption = styled.div`
   border-radius: 1rem;
   margin: 1rem 0 0 0;
   cursor: pointer;
-  white-space: pre;
+  white-space: pre-wrap;
 `
 
 const Item = ({
