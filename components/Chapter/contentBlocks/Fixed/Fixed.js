@@ -19,7 +19,8 @@ const Rail = styled.div`
   position: relative;
   background: black;
   width: 100%;
-  height: 200vh;
+  height: 250vh;
+  padding: 50vh 0 0 0;
   margin: 0 0 -100vh 0;
 `
 
