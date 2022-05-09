@@ -24,6 +24,8 @@ const ChapterNav = ({
   onChapterClick,
   chapterIndex,
   navLabel,
+  indexRefs,
+  titleRefs,
 }) => {
   return (
     <Wrap>
@@ -38,6 +40,8 @@ const ChapterNav = ({
             href={`#${id}`}
             isActive={index <= chapterIndex}
             isCurrent={index === chapterIndex}
+            setIndexRef={c => indexRefs.current[index] = c}
+            setTitleRef={c => titleRefs.current[index] = c}
           />
         )
       })}
