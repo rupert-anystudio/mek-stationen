@@ -55,11 +55,21 @@ const Title = styled.div`
   width: 18rem;
 `
 
-const ChapterNavEntry = ({ title, index, isActive, isCurrent, onClick, wrapRef, href }) => {
+const ChapterNavEntry = ({
+  title,
+  index,
+  isActive,
+  isCurrent,
+  onClick,
+  wrapRef,
+  href,
+  setTitleRef,
+  setIndexRef,
+}) => {
   return (
     <Wrap onClick={onClick} ref={wrapRef} href={href}>
-      <Index isInverted={isActive} hasCircle={isCurrent}>{index}</Index>
-      <Title>{title}</Title>
+      <Index isInverted={isActive} hasCircle={isCurrent} ref={setIndexRef}>{index}</Index>
+      <Title ref={setTitleRef}>{title}</Title>
     </Wrap>
   )
 }

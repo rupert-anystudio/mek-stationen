@@ -1,8 +1,32 @@
 /* @font-face {
-  font-family: "ABC Repro";
-  src: local("ABC Repro"),
-      url("/fonts/ABCRepro-Regular.woff2") format("woff2"),
-      url("/fonts/ABCRepro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-family: "Balboa";
+  src: local("Balboa"),
+      url("/fonts/Balboa-Bold.otf") format("otf"),
+      url("/fonts/Balboa-Bold.ttf") format("ttf");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: local("Acumin Pro"),
+      url("/fonts/AcuminPro-Medium.ttf") format("otf"),
+      url("/fonts/AcuminPro-Medium.ttf") format("ttf");
+  font-weight: bold;
   font-style: normal;
 } */
+
+@font-face {
+  font-family: 'acuminpro';
+  src: url('/fonts/AcuminPro-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'balboabold';
+  src: url('/fonts/balboa-bold-webfont.woff2') format('woff2'),
+       url('/fonts/balboa-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

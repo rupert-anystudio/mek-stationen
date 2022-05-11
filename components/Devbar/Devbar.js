@@ -3,7 +3,7 @@ import ChapterSelect from './ChapterSelect'
 import HeaderCollapsedToggle from './HeaderCollapsedToggle'
 import HeaderHiddenToggle from './HeaderHiddenToggle'
 
-const isDev = process.env.NODE_ENV === 'development'
+// const isDev = process.env.NODE_ENV === 'development'
 
 const Wrap = styled.div`
   position: fixed;
@@ -27,7 +27,7 @@ const Content = styled.div`
 `
 
 const Devbar = () => {
-  if (!isDev) return null
+  // if (!isDev) return null
   return (
     <Wrap>
       <Content>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import fontstyles from '../../styles/fontstyles'
 
 const Wrap = styled.div`
   padding: 0;
@@ -30,13 +31,14 @@ const Part = styled.div`
   margin: 0;
   padding: 0;
   position: relative;
-  font-size: 6vw;
+  font-size: 8vw;
   line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
   white-space: pre;
   padding-left: ${props => props.offset}em;
   letter-spacing: -0.02sem;
+  ${fontstyles.title}
 `
 
 const SkewedTitleSheet = ({ parts = [] }) => (
