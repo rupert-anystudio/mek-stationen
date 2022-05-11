@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import useAppContext from '../AppContext/useAppContext'
 import ChapterNav from './ChapterNav'
 
-const ChapterNavContainer = ({ indexRefs, titleRefs }) => {
+const ChapterNavContainer = ({ indexRefs, titleRefs, labelRef }) => {
   const { chapters, setChapterIndex, chapterIndex, globals } = useAppContext()
 
   const handleChapterClick = useCallback(index => {
@@ -17,6 +17,7 @@ const ChapterNavContainer = ({ indexRefs, titleRefs }) => {
       navLabel={globals.chapterNavLabel}
       indexRefs={indexRefs}
       titleRefs={titleRefs}
+      labelRef={labelRef}
     />
   )
 }

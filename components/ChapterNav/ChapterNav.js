@@ -26,10 +26,11 @@ const ChapterNav = ({
   navLabel,
   indexRefs,
   titleRefs,
+  labelRef,
 }) => {
   return (
     <Wrap>
-      <Label>{navLabel}</Label>
+      <Label ref={labelRef}>{navLabel}</Label>
       {chapters.map(({ key, title, index, id }) => {
         return (
           <ChapterNavEntry
