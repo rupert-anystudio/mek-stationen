@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import ChapterSelect from './ChapterSelect'
 import HeaderCollapsedToggle from './HeaderCollapsedToggle'
 import HeaderHiddenToggle from './HeaderHiddenToggle'
+import ScrollDirectionDisplay from './ScrollDirectionDisplay'
 
 // const isDev = process.env.NODE_ENV === 'development'
 
@@ -34,6 +35,7 @@ const Devbar = () => {
         <ChapterSelect />
         <HeaderHiddenToggle />
         <HeaderCollapsedToggle />
+        <ScrollDirectionDisplay />
       </Content>
     </Wrap>
   )
