@@ -18,7 +18,7 @@ const Wrap = styled.div`
 
 const Quote = ({ value }) => (
   <Wrap>
-    <p>{value}</p>
+    <p className='appearingText'>{value}</p>
   </Wrap>
 )
 
