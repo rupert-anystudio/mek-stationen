@@ -24,13 +24,13 @@ const HeaderContainer = () => {
       .timeline({ paused: true, defaults: { duration: 1, ease: 'strong.inOut' } })
       .fromTo(
         titleRefs.current,
-        { opacity: 1 },
-        { opacity: 0, duration: 0.15, stagger: 0 }
+        { autoAlpha: 1 },
+        { autoAlpha: 0, duration: 0.2, stagger: 0 }
       )
       .fromTo(
         backgroundRef.current,
         { y: 0 },
-        { y: -100, duration: 0.15 },
+        { y: -100, duration: 0.2 },
         '-=0.1'
       )
       .fromTo(
@@ -41,10 +41,16 @@ const HeaderContainer = () => {
       )
       .fromTo(
         backToStartRef.current,
-        { x: 0, opacity: 1 },
-        { x: '130%', opacity: 1, duration: 0.25 },
+        { x: 0, autoAlpha: 1 },
+        { x: '130%', autoAlpha: 1, duration: 0.25 },
         '-=0.35'
       )
+      // .fromTo(
+      //   backgroundRef.current,
+      //   { autoAlpha: 1 },
+      //   { autoAlpha: 0, duration: 0.4 },
+      //   '-=0.4'
+      // )
     animRefs.current.timeline = timeline
     return () => {
       timeline.kill()

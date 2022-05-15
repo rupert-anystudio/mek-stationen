@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import BackToStart from './components/BackToStart'
 import ChapterNav from './components/ChapterNav'
 import LanguageSwitch from './components/LanguageSwitch'
+import StationTitle from './components/StationTitle'
 
 const Wrap = styled.header`
   flex: 0 0 auto;
@@ -13,7 +14,7 @@ const Wrap = styled.header`
   transform: translateY(${props => props.isHidden ? -100 : 0}%);
   transition: transform 0.3s ease-in-out;
   pointer-events: none;
-  overflow: hidden;
+  /* height: 0; */
 `
 
 const Background = styled.div`
@@ -37,6 +38,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 6rem;
+  overflow: hidden;
   button, a {
     pointer-events: auto;
   }
@@ -53,6 +55,7 @@ const Header = ({
 }) => {
   return (
     <>
+      <StationTitle />
       <Wrap isHidden={isHidden}>
         <Background
           ref={backgroundRef}

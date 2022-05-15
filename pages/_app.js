@@ -14,9 +14,10 @@ function MyApp({ Component, pageProps }) {
     chapters = [],
     title = 'MEK Station',
     assetFolder,
+    titleParts = [],
   } = pageProps
   return (
-    <AppContextProvider data={{ chapters, assetFolder }}>
+    <AppContextProvider data={{ chapters, assetFolder, titleParts }}>
       <GlobalStyles />
       <Head>
         <title>{title}</title>
