@@ -6,10 +6,6 @@ const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
   }
-  html {
-    font-size: 62.5%;
-    /* scroll-behavior: smooth; */
-  }
   body, html, #__next {
     background: white;
     color: black;
@@ -19,13 +15,19 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     user-select: none;
   }
+  html {
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+    /* scroll-snap-type: y mandatory;
+    scroll-snap-points-y: repeat(100vh); */
+  }
   body {
     ${fontsizes.root}
     ${fontstyles.root}
     text-rendering: optimizeLegibility;
-    overflow: -moz-scrollbars-vertical;
-    overflow: hidden;
-    overflow-y: scroll;
+    /* overflow: -moz-scrollbars-vertical; */
+    /* overflow: hidden;
+    overflow-y: scroll; */
     background:black;
   }
   #__next {
