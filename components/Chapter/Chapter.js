@@ -10,7 +10,7 @@ const Wrap = styled.div`
   padding: 0;
   position: relative;
   width: 100%;
-  min-height: 150vh;
+  min-height: 100vh;
   background: white;
 `
 
