@@ -4,6 +4,7 @@ import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'
 import translateGlobals from '../../lib/translateGlobals'
 import AppContext from './AppContext'
+import useWindowScrollDirection from '../useWindowScrollDirection'
 
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
@@ -15,6 +16,8 @@ const AppContextProvider = ({ children, data }) => {
   const assetFolder = data?.assetFolder || ''
   const chapters = translateChapters(chaptersRaw, currentLang, assetFolder)
   const globals = translateGlobals(globalsRaw, currentLang)
+
+  const scrollDir = useWindowScrollDirection()
   
   return (
     <AppContext.Provider
@@ -30,6 +33,7 @@ const AppContextProvider = ({ children, data }) => {
         setHeaderIsCollapsed,
         headerIsHidden,
         setHeaderIsHidden,
+        scrollDir,
       }}
     >
       {children}
