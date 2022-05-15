@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import SkewedTitleSheet from '../SkewedTitleSheet'
+import SkewedTitleSheet from './contentBlocks/SkewedTitleSheet'
 import Text from './contentBlocks/Text'
 import Quote from './contentBlocks/Quote'
 import Images from './contentBlocks/Images'

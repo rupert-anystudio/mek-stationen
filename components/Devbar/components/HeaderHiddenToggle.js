@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import useAppContext from '../AppContext/useAppContext'
+import { useAppContext } from '../../AppContext'
 
 const HeaderHiddenToggle = () => {
   const { headerIsHidden, setHeaderIsHidden } = useAppContext()

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import fontstyles from '../../styles/fontstyles'
+import fontstyles from '../../../../../../styles/fontstyles'
 
 const Wrap = styled.div`
   padding: 0;

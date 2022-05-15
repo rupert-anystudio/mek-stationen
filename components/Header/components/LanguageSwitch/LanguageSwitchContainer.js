@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import useAppContext from '../AppContext/useAppContext'
+import useAppContext from '../../../AppContext/useAppContext'
 import LanguageSwitch from './LanguageSwitch'
 
 const LanguageSwitchContainer = () => {

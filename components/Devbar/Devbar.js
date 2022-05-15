@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import ChapterSelect from './ChapterSelect'
-import HeaderCollapsedToggle from './HeaderCollapsedToggle'
-import HeaderHiddenToggle from './HeaderHiddenToggle'
-import ScrollDirectionDisplay from './ScrollDirectionDisplay'
+import ChapterSelect from './components/ChapterSelect'
+import HeaderCollapsedToggle from './components/HeaderCollapsedToggle'
+import HeaderHiddenToggle from './components/HeaderHiddenToggle'
+import ScrollDirectionDisplay from './components/ScrollDirectionDisplay'
 
 // const isDev = process.env.NODE_ENV === 'development'
 

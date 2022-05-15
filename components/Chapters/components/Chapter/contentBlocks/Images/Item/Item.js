@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import PillButton from '../../../../PillButton'
+import PillButton from '../../../../../../PillButton'
 
 const Wrap = styled.div`
   height: 100%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import BackToStart from '../BackToStart'
-import ChapterNav from '../ChapterNav'
-import LanguageSwitch from '../LanguageSwitch'
+import BackToStart from './components/BackToStart'
+import ChapterNav from './components/ChapterNav'
+import LanguageSwitch from './components/LanguageSwitch'
 
 const Wrap = styled.header`
   flex: 0 0 auto;

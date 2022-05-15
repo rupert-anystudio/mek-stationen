@@ -1,4 +1,4 @@
-import useAppContext from '../AppContext/useAppContext'
+import { useAppContext } from '../../AppContext'
 
 const ScrollDirectionDisplay = () => {
   const { scrollDir } = useAppContext()

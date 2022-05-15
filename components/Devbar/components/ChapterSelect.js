@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import useAppContext from '../AppContext/useAppContext'
+import { useAppContext } from '../../AppContext'
 
 const ChapterSelect = () => {
   const { chapters, chapterIndex, setChapterIndex } = useAppContext()

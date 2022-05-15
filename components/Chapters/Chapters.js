@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Chapter from '../Chapter'
+import Chapter from './components/Chapter'
 
 const Wrap = styled.div`
   margin: 0;

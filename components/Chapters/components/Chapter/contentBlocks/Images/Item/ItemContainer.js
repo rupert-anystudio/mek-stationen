@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
-import useAppContext from '../../../../AppContext/useAppContext'
-import useResizeObserver from '../../../../useResizeObserver'
+import useAppContext from '../../../../../../AppContext/useAppContext'
+import useResizeObserver from '../../../../../../useResizeObserver'
 import Item from './Item'
 
 const ItemContainer = props => {
