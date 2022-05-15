@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.button`
@@ -22,9 +23,10 @@ const PillButton = ({
   isActive,
   style,
   className,
-}) => {
+}, ref) => {
   return (
     <Wrap
+      ref={ref}
       onClick={onClick}
       isActive={isActive}
       className={className}
@@ -35,4 +37,4 @@ const PillButton = ({
   )
 }
 
-export default PillButton
+export default forwardRef(PillButton)
