@@ -1,11 +1,20 @@
+import { forwardRef } from 'react'
 import useAppContext from '../AppContext/useAppContext'
 import PillButton from '../PillButton'
 
-const BackToStart = () => {
+const BackToStart = ({
+  className,
+  style,
+}, ref) => {
   const { globals } = useAppContext()
   return (
-    <PillButton label={globals.backToStart} />
+    <PillButton
+      ref={ref}
+      label={globals.backToStart}
+      className={className}
+      style={style}
+    />
   )
 }
 
-export default BackToStart
+export default forwardRef(BackToStart)
