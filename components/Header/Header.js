@@ -12,6 +12,8 @@ const Wrap = styled.header`
   z-index: 100;
   transform: translateY(${props => props.isHidden ? -100 : 0}%);
   transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+  overflow: hidden;
 `
 
 const Background = styled.div`
@@ -23,6 +25,7 @@ const Background = styled.div`
   right: 0;
   background: white;
   border-bottom: 2px solid currentColor;
+  pointer-events: auto;
 `
 
 const Content = styled.div`
@@ -34,22 +37,36 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 6rem;
+  button, a {
+    pointer-events: auto;
+  }
 `
 
 const Header = ({
   isHidden,
+  isCollapsed,
   titleRefs,
   indexRefs,
-  backgroundRef
+  backgroundRef,
+  onBackgroundClick,
+  backToStartRef,
 }) => {
   return (
     <>
       <Wrap isHidden={isHidden}>
-        <Background ref={backgroundRef} />
+        <Background
+          ref={backgroundRef}
+          onClick={onBackgroundClick}
+        />
         <Content>
           <LanguageSwitch />
-          <ChapterNav indexRefs={indexRefs} titleRefs={titleRefs} />
-          <BackToStart />
+          <ChapterNav
+            indexRefs={indexRefs}
+            titleRefs={titleRefs}
+          />
+          <BackToStart
+            ref={backToStartRef}
+          />
         </Content>
       </Wrap>
     </>
