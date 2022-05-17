@@ -4,7 +4,7 @@ const useWindowScrollDirection = () => {
   const [scrollDir, setScrollDir] = useState('UP')
 
   useEffect(() => {
-    const threshold = 50
+    const threshold = 300
     let lastScrollY = window.pageYOffset
     let ticking = false
 

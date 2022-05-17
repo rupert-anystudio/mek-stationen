@@ -7,10 +7,11 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    width: 1920px;
-    height: 1080px;
+    max-width: 1920px;
+    max-height: 1080px;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
     position: relative;
     padding: 0;
     margin: 0;
