@@ -9,7 +9,12 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  /* gap: 1rem; */
   /* cursor: pointer;
   &:hover {
     text-decoration: none;

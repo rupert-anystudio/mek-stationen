@@ -3,16 +3,16 @@ const props = {
   assetFolder: 'peacock',
   titleParts: {
     de: [
-      { offset: .8, value: 'Ein Stuhl' },
-      { offset: 0, value: 'als Ikone von' },
-      { offset: 2.6, value: 'Popkutlur' },
-      { offset: 4.6, value: '& Politik' },
+      { offset: .8, value: 'Der' },
+      { offset: 0, value: 'Peacock Chair' },
+      { offset: 2.6, value: 'von Pop bis' },
+      { offset: 4.6, value: 'Politik' },
     ],
     en: [
-      { offset: 1.9, value: 'A chair' },
-      { offset: 0, value: 'as an icon of' },
-      { offset: 2.4, value: 'popculture' },
-      { offset: 6, value: '& politics' },
+      { offset: 1.9, value: 'The' },
+      { offset: 0, value: 'Peacock Chair' },
+      { offset: 2.4, value: 'From Pop to' },
+      { offset: 6, value: 'Politics' },
     ],
   },
   chapters: [
@@ -22,6 +22,11 @@ const props = {
           { offset: .8, value: 'Kommt ihnen' },
           { offset: 0, value: 'dieser Stuhl' },
           { offset: 2.8, value: 'bekannt vor?' },
+        ],
+        en: [
+          { offset: .8, value: 'Does this' },
+          { offset: 0, value: 'chair look familiar' },
+          { offset: 2.8, value: 'to you?' },
         ],
       },
       content: [
@@ -87,6 +92,10 @@ const props = {
           { offset: 0, value: 'Wie alles' },
           { offset: 0, value: 'begann' },
         ],
+        en: [
+          { offset: 0, value: 'How it' },
+          { offset: 0, value: 'all began' },
+        ],
       },
       content: [
         {
@@ -117,7 +126,7 @@ const props = {
             en: 'Historical photographs do not always take into account whether the person depicted wanted to be recorded photographically. We do not wish to simply reproduce stereotyping images. Consequently, we have chosen to obscure the view of the person depicted here. By clicking on the image, you may decide whether you wish to see the photograph of the "Jail Bird in a Peacock Chair" in its entirety.',
           },
           coverImage: {
-            src: 'Kapitel 2 Wie alles A-cover.png',
+            src: 'Kapitel 2 Wie alles A-cover.jpg',
           }
         },
         {
@@ -145,7 +154,7 @@ const props = {
               },
             },
             {
-              src: 'Kapitel 2 Wie alles D.png',
+              src: 'Kapitel 2 Wie alles D.jpg',
               value: {
                 de: `Schwarz-Weiß-Porträtfoto eines Mädchens und eines Jungen, Lily Faulkner Studio, um 1900\n© Pioneer Photos - Lucy Rennie, Howard Black & J. P. Johnstone History`,
                 de: `Black and white portrait photograph of a girl and a boy, Lily Faulkner Studio, circa 1900\n© Pioneer Photos - Lucy Rennie, Howard Black & J. P. Johnstone History`,
@@ -178,7 +187,7 @@ const props = {
               },
             },
             {
-              src: 'Kapitel 2 Wie alles G.jpeg',
+              src: 'Kapitel 2 Wie alles G.jpg',
               value: {
                 de: `James Brown, The Original Disco Man, 1978\n© Polydor Records`,
                 en: `James Brown, The Original Disco Man, 1978\n© Polydor Records`,
@@ -207,6 +216,10 @@ const props = {
         de: [
           { offset: 0, value: 'Aus Sessel' },
           { offset: 0, value: 'wird Symbol' },
+        ],
+        en: [
+          { offset: 0, value: 'A chair becomes' },
+          { offset: 0, value: 'a symbol' },
         ],
       },
       content: [
@@ -243,10 +256,10 @@ const props = {
             en: 'Jo-Ann Morgan, Professor of African American Studies and Art History, goes into the context of this photo and its meaning:'
           }
         },
-        // {
-        //   type: 'video',
-        //   src: 'Film Kapitel 3 Sessel Symbol 1 dt UTs.mp4',
-        // },
+        {
+          type: 'video',
+          src: 'Film Kapitel 3 Sessel Symbol 1 dt UTs.mp4',
+        },
         {
           type: 'text',
           value: {
@@ -286,25 +299,29 @@ const props = {
             {
               src: 'Kapitel 3 Sessel Symbol D.jpg',
               value: {
-                de: `Sängerin Beyoncé mit Tänzerinnen, London, 2016\n© Daniela Vesco`,
+                de: `Sängerin Beyoncé mit Tänzerinnen, London, 2016\n©Daniela Vesco`,
+                en: `Singer Beyoncé with dancers, London, 2016.\n©Daniela Vesco`,
               },
             },
             {
               src: 'Kapitel 3 Sessel Symbol E.jpg',
               value: {
                 de: `„Black Panther“ Filmplakat, 2018\n© Marvel Studios`,
+                en: `„Black Panther” movie poster, 2018\n© Marvel Studios`,
               },
             },
             {
               src: 'Kapitel 3 Sessel Symbol F.jpg',
               value: {
                 de: `Missy Eliott: This is not a Test, 2003, Artwork\n© Warwick Saint Studio`,
+                en: `Missy Eliott: This is not a Test, 2003, Artwork \n© Warwick Saint Studio`,
               },
             },
             {
               src: 'Kapitel 3 Sessel Symbol G.jpg',
               value: {
                 de: `Drake, More Life\n© 2017 Young Money Entertainment/Cash Money Records`,
+                en: `Drake, More Life\n© 2017 Young Money Entertainment/Cash Money Records`,
               },
             },
           ]
@@ -319,12 +336,19 @@ const props = {
           { offset: 2.5, value: 'Symbolkraft' },
           { offset: 5, value: 'auch in Europa' },
         ],
+        en: [
+          { offset: .4, value: 'Colonial' },
+          { offset: 0, value: 'Entanglements' },
+          { offset: 2.5, value: 'Symbolic Power' },
+          { offset: 5, value: 'in Europe, too' },
+        ],
       },
       content: [
         {
           type: 'text',
           value: {
             de: 'Auch in Europa wird das Symbol des Peacock Chairs genutzt, um an den Kampf zahlreicher Schwarzer Menschen zu erinnern. 2017 jährte sich der Verkauf der ehemaligen Kolonialgebiete der karibischen Virgin Islands von Dänemark an die USA zum 100. Mal. Die Künstlerinnen La Vaughn Belle und Jeannette Ehlers schufen zu diesem Anlass das transatlantische Kunstprojekt „I am Queen Mary“. Im Zentrum: Mary Thomas.',
+            en: 'The symbol of the Peacock Chair is used to commemorate many Black people’s struggles in Europe, too. 2017 marked the 100th anniversary of the sale of the Caribbean Virgin Islands, former colonial territories of Denmark, to the United States. Artists La Vaughn Belle and Jeannette Ehlers produced the transatlantic art project "I am Queen Mary" to mark this occasion. At the centre: Mary Thomas.',
           }
         },
         {
@@ -333,13 +357,15 @@ const props = {
             {
               src: 'Kapitel 4 Koloniale A.jpg',
               value: {
-                de: `Die Skulptur „I am Queen Mary“ vor dem ehemaligen Lagergebäude der Dänischen Westindienkompanie im Hafen von Kopenhagen, heute die „Royal Casting Collection“, 2018,\n© David Berg`,
+                de: `Die Skulptur „I am Queen Mary“ vor dem ehemaligen Lagergebäude der Dänischen Westindienkompanie im Hafen von Kopenhagen, heute die „Royal Casting Collection“, 2018,\n©David Berg`,
+                en: `The sculpture “I am Queen Mary” in front of the former warehouse of the Danish West Indies Company in Copenhagen harbour, now the “Royal Casting Collection”, 2018,\n©David Berg`,
               },
             },
             {
-              src: 'Kapitel 4 Koloniale B.jpeg',
+              src: 'Kapitel 4 Koloniale B.jpg',
               value: {
                 de: `Bei der Einweihung der Skulptur „I am Queen Mary“ vor dem ehemaligen Lagergebäude der Dänischen Westindienkompanie im Hafen von Kopenhagen, heute die „Royal Casting Collection“ am 31. März 2018,\n© Sarah Giersing`,
+                en: `At the unveiling of the sculpture “I am Queen Mary” in front of the former warehouse of the Danish West Indies Company in Copenhagen harbour, now the “Royal Casting Collection” on 31 March 2018,\n© Sarah Giersing`,
               },
             },
           ]
@@ -348,58 +374,63 @@ const props = {
           type: 'quote',
           value: {
             de: 'Das Kunstwerk zeigt sie als Kunstfigur auf einem Peacock Chair thronend vor dem Gebäude in Kopenhagen, in dem sich einst der Hauptsitz der Dänischen Westindien-Kompanie befand.',
+            en: 'The artwork shows her as a sculptural figure enthroned on a Peacock Chair, set in front of the building in Copenhagen that once housed the headquarters of the Danish West India Company.',
           }
         },
         {
           type: 'text',
           value: {
             de: 'Obgleich die Versklavung von Menschen 1848 in dem dänischen Kolonialgebiet abgeschafft wurde, änderte sich an den Lebens- und Arbeitsbedingungen der Menschen wenig. Am 1. Oktober 1878 führten drei Frauen auf der Insel Saint Croix im karibischen Meer eine Revolte an, um die Verbesserung der Arbeitsbedingungen Schwarzer Menschen auf den Plantagen der weißen zu erkämpfen. Eine von ihnen war Mary Thomas. Für ihre Beteiligung am Aufstand wurde sie zunächst zum Tode verurteilt. Später wurde dies in lebenslange Haft, die sie ab 1882 in Kopenhagen absaß, umgewandelt.',
+            en: `Although slavery was abolished in the Danish colonial territory in 1848, people's living and working conditions changed very little. On October 1, 1878, three women led a revolt on the island of Saint Croix in the Caribbean Sea over the working conditions of Blacks on white plantations. One of them was Mary Thomas. Initially, she was sentenced to death for her participation in the revolt. This was later commuted to life imprisonment, which she served in Copenhagen as from 1882.`,
           }
         },
         {
           type: 'text',
           value: {
             de: 'Das Aufbegehren Schwarzer Menschen auf Plantagen ist nur wenigen Personen der weißen Mehrheitsgesellschaft bekannt. Dabei haben sie durch kleine Sabotageakte oder große Revolten immer schon ihr Schicksal in die Hand genommen und sich gewehrt. Die sieben Meter hohe, monumentale Skulptur in Kopenhagen gibt diesem Teil der Geschichte Raum. Sie schafft Bewusstsein in der Öffentlichkeit. ',
+            en: 'Only a few people in white majority society are aware of the rebellion of Blacks on plantations. But they have always taken their fate into their own hands and fought back via small acts of sabotage, or in bigger revolts. The seven-metre-high monumental sculpture in Copenhagen creates',
           }
         },
         {
           type: 'text',
           value: {
-            de: 'Die Künstlerinnen La Vaughn Belle und Jeannette Ehlers erklären warum sie genau diese Art der Darstellung wählten:'
+            de: 'Die Künstlerinnen La Vaughn Belle und Jeannette Ehlers erklären warum sie genau diese Art der Darstellung wählten:',
+            en: 'Artists La Vaughn Belle and Jeannette Ehlers explain exactly why they chose this form of representation:',
           }
         },
         {
           type: 'video',
-          value: {
-            de: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
-            en: 'Film Kapitel 4 Koloniale 1 engl UTs.mp4',
-          }
+          src: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
         },
         {
           type: 'text',
           value: {
             de: 'Der Pfauensessel ist also mehr als nur ein schickes Möbel. Besonders für Schwarze Menschen und People of Color in den USA und in Europa ist er zu einem festen Symbol ihrer politischen Identität geworden. Es ist wichtig, alle Perspektiven eines solchen Objekts zu beleuchten. Auf der einen Seite ist der Peacock Chair auch heute noch ein beliebtes Requisit in der Mode- und Werbefotografie. Auch auf Social Media ist der ikonische Sessel erfolgreich: Das Hashtag „Peacockchair“ hat über 100.000 Einträge auf Instagram. Auf der anderen Seite lassen sich an ihm die kolonialen Verflechtungen – von Ausbeutung, kultureller Aneignung und Aufbegehren – und ihre globalen Auswirkungen bis heute verdeutlichen – von Politik bis Popkultur.',
+            en: 'The Peacock Chair, therefore, is more than just a chic item of furniture. Especially for Blacks and people of colour in the USA and Europe, it has developed into a firm symbol of their political identity. It is important to shed light on every perspective of such an object. On the one hand, the Peacock Chair is still a popular prop in fashion and advertising photography. The iconic chair is also successful on social media: the hashtag "Peacockchair" uncovers 100,000 entries on Instagram. On the other hand, it can be used to illustrate colonial entanglements – those of exploitation, cultural appropriation and rebellion, and their enduring global impact in fields ranging from politics to Pop culture, even today.',
           }
         },
         {
           type: 'images',
           images: [
             {
-              src: 'Kapitel 4 Koloniale C.PNG',
+              src: 'Kapitel 4 Koloniale C.jpg',
               value: {
-                de: `Michelle Obama bei ihrem Abschlussball, 1982\n© Courtesy of Michelle Obama`,
+                de: `Michelle Obama bei ihrem Abschlussball, 1982\n©Courtesy of Michelle Obama`,
+                en: `Michelle Obama at her prom 1982\n©Courtesy of Michelle Obama`,
+              }
+            },
+            {
+              src: 'Kapitel 4 Koloniale D.jpg',
+              value: {
+                de: `Schauspielerin Kristin Davis in einer Modestrecke für Instyle Magazine, 2011\n©Instyle Magazine`,
+                en: `Actress Kristin Davis modelling the spring collection for Instyle Magazine, 2011\n©Instyle Magazine`,
               },
             },
             {
-              src: 'Kapitel 4 Koloniale D.PNG',
+              src: 'Kapitel 4 Koloniale E.jpg',
               value: {
-                de: `Schauspielerin Kristin Davis in einer Modestrecke für Instyle Magazine, 2011\n© Instyle Magazine`,
-              },
-            },
-            {
-              src: 'Kapitel 4 Koloniale E.jpeg',
-              value: {
-                de: `Model Claudia Schiffer auf dem Cover des ZEITmagazins Nr. 42, 2010© Frederike Helwig/ ZEITmagazin`,
+                de: `Model Claudia Schiffer auf dem Cover des ZEITmagazins Nr. 42, 2010\n©Frederike Helwig/ ZEITmagazin`,
+                en: `Model Claudia Schiffer on the cover of ZEITmagazin issue 42, 2010\n©Frederike Helwig/ ZEITmagazin`,
               },
             },
           ]

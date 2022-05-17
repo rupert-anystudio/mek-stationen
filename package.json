@@ -8,7 +8,7 @@
     "export": "rm -rf out && next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "mek": "yarn export && node leading-slash-removal.js && node archive-out.js"
+    "mek": "yarn export && node leading-slash-removal.js"
   },
   "dependencies": {
     "@types/react": "^18.0.8",

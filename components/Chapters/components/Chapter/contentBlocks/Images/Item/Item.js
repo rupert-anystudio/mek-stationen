@@ -1,3 +1,4 @@
+// import Image from 'next/image'
 import styled from 'styled-components'
 import PillButton from '../../../../../../PillButton'
 
@@ -64,6 +65,7 @@ const Item = ({
       </CaptionWrap>
       <ImageWrap style={{ transform: `translateY(${showCaption ? -captionHeight : 0}px)` }}>
         <Img src={src} />
+        {/* <Image src={`/${src}`} layout='responsive' alt='' width={100} height={100} /> */}
         {!showCaption && (
           <CaptionButton
             label={captionToggleLabel}

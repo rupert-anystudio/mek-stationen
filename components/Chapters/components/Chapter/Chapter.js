@@ -24,7 +24,7 @@ const Chapter = ({ titleParts, content, wrapRef, id }) => {
         if (type === 'quote') return <Quote key={key} {...rest} />
         if (type === 'images') return <Images key={key} {...rest} />
         if (type === 'fixed') return <Fixed key={key} {...rest} />
-        // if (type === 'video') return <Video key={key} {...rest} />
+        if (type === 'video') return <Video key={key} {...rest} />
         return null
       })}
     </Wrap>

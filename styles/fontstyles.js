@@ -1,6 +1,6 @@
 const fontstyles = {
   root: `
-    font-family: "AcuminPro", Helvetica, Arial, sans-serif;
+    font-family: "Acumin Pro", Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
   `,

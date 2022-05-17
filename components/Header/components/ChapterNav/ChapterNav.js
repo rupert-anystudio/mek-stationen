@@ -9,7 +9,12 @@ const Wrap = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1rem;
+  > * {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  /* gap: 1rem; */
 `
 
 const Label = styled.div`

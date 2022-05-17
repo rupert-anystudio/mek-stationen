@@ -6,7 +6,12 @@ const Wrap = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
+  /* gap: 1rem; */
+  > button {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 `
 
 const LanguageSwitch = ({

@@ -6,39 +6,40 @@ const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
   }
-  body, html, #__next {
-    background: white;
-    color: black;
-    width: 100%;
-    max-width: 100%;
+  html {
+    width: 1920px;
+    height: 1080px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
     padding: 0;
     margin: 0;
     user-select: none;
-  }
-  html {
+    background: white;
+    color: black;
     font-size: 62.5%;
-    /* scroll-behavior: smooth; */
-    /* scroll-snap-type: y mandatory;
-    scroll-snap-points-y: repeat(100vh); */
   }
   body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
     ${fontsizes.root}
     ${fontstyles.root}
-    text-rendering: optimizeLegibility;
-    /* overflow: -moz-scrollbars-vertical; */
-    /* overflow: hidden;
-    overflow-y: scroll; */
-    background:black;
   }
   #__next {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    margin: 0 auto;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
     min-height: 100vh;
-    /* max-width: 192rem; */
-    margin: 0 auto;
+    transform: translate3d(0,0,0);
   }
   a {
     color: inherit;

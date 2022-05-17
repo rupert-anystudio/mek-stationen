@@ -57,14 +57,14 @@ const HeaderContainer = () => {
     }
   }, [])
 
-  useEffect(() => {
-    if (scrollDir === 'DOWN') {
-      setHeaderIsCollapsed(true)
-    }
-    if (scrollDir === 'UP') {
-      setHeaderIsCollapsed(false)
-    }
-  }, [scrollDir, setHeaderIsCollapsed])
+  // useEffect(() => {
+  //   if (scrollDir === 'DOWN') {
+  //     setHeaderIsCollapsed(true)
+  //   }
+  //   if (scrollDir === 'UP') {
+  //     setHeaderIsCollapsed(false)
+  //   }
+  // }, [scrollDir, setHeaderIsCollapsed])
 
   useEffect(() => {
     if (headerIsCollapsed) {

@@ -10,7 +10,7 @@ import useWindowScrollDirection from '../useWindowScrollDirection'
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
   const [currentLang, setCurrentLang] = useState(langs[0].key)
-  const [headerIsCollapsed, setHeaderIsCollapsed] = useState(false)
+  const [headerIsCollapsed, setHeaderIsCollapsed] = useState(true)
   const [headerIsHidden, setHeaderIsHidden] = useState(false)
 
   // const titlePartsRaw = data?.titleParts || []
