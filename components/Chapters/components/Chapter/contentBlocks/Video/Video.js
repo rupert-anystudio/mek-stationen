@@ -11,24 +11,24 @@ const Wrap = styled.div`
   width: 100%;
   background: black;
   z-index: 100;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 `
 
 const Stage = styled.div`
-  flex: 0 0 auto;
-  width: 1440px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0.7);
 `
 
 const Player = styled.div`
   position: relative;
-  height: 1080px;
+  width: 100%;
   background: black;
-  /* video {
-    transform: translate3d(0,0,0);
-  } */
+  video {
+    aspect-ratio: 16 / 9;
+  }
 `
 
 const Controls = styled.div`
@@ -36,7 +36,7 @@ const Controls = styled.div`
   background: rgba(0,0,0,0.8);
   font-size: 5rem;
   line-height: 1;
-  padding: 2rem;
+  padding: 1rem 0;
   color: white;
 `
 

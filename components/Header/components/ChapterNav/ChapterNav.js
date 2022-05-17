@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import fontstyles from '../../../../styles/fontstyles'
 import ChapterNavEntry from './ChapterNavEntry'
 
 const Wrap = styled.div`
@@ -22,6 +23,7 @@ const Label = styled.div`
   font-weight: bold;
   padding: 1.1rem 0;
   white-space: pre;
+  ${fontstyles.title}
 `
 
 const ChapterNav = ({ 

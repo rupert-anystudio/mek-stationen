@@ -1,5 +1,6 @@
 import { forwardRef } from 'react'
 import styled from 'styled-components'
+import fontstyles from '../../styles/fontstyles'
 
 const Wrap = styled.button`
   margin: 0;
@@ -13,8 +14,7 @@ const Wrap = styled.button`
   border-radius: 2.4rem;
   cursor: pointer;
   font-size: 3.2rem;
-  font-weight: bold;
-  letter-spacing: -0.02em;
+  ${fontstyles.title}
 `
 
 const PillButton = ({

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
+import fontstyles from '../../../../styles/fontstyles'
 
 const Wrap = styled.div`
   position: relative;
@@ -34,9 +35,9 @@ const Index = styled.a`
   align-items: center;
   font-size: 2.7rem;
   line-height: 1em;
-  font-weight: bold;
   background: ${props => props.isInverted ? 'black' : 'white'};
   color: ${props => props.isInverted ? 'white' : 'black'};
+  ${fontstyles.title}
   ${props => props.hasCircle && css`
     &:before {
       content: '';
@@ -46,7 +47,7 @@ const Index = styled.a`
       width: 5.5rem;
       height: 5.5rem;
       transform: translateX(-50%) translateY(-50%);
-      border: 2px dotted black;
+      border: 2px solid black;
       border-radius: 50%;
     }
   `}
@@ -58,6 +59,7 @@ const Title = styled.a`
   font-size: 2rem;
   font-weight: bold;
   width: 18rem;
+  ${fontstyles.title}
 `
 
 const ChapterNavEntry = ({
