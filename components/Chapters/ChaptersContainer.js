@@ -5,7 +5,7 @@ import Chapters from './Chapters'
 const ChaptersContainer = () => {
   const { chapters } = useAppContext()
 
-  useScrollTriggerAnimations()
+  // useScrollTriggerAnimations()
   return (
     <Chapters chapters={chapters} />
   )

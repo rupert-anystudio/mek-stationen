@@ -22,9 +22,12 @@ const AppContextProvider = ({ children, data }) => {
 
   const scrollDir = useWindowScrollDirection()
 
-  const onLangCicle = () => {
+  const onLangCycle = () => {
     const index = langKeys.indexOf(currentLang)
-    console.log('onLangCicle',index)
+    const nextIndex = index + 1 >= langKeys.length ? 0 : index + 1
+    console.log('onLangCycle',index, nextIndex)
+    const nextLang = langKeys[nextIndex]
+    setCurrentLang(nextLang)
   }
 
   return (
@@ -43,7 +46,7 @@ const AppContextProvider = ({ children, data }) => {
         setHeaderIsHidden,
         scrollDir,
         titleParts,
-        onLangCicle,
+        onLangCycle,
       }}
     >
       {children}

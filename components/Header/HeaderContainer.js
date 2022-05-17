@@ -75,8 +75,8 @@ const HeaderContainer = () => {
   }, [headerIsCollapsed])
 
   const handleBackgroundClick = useCallback(() => {
-    setHeaderIsCollapsed(prevVal => !prevVal)
-  }, [setHeaderIsCollapsed])
+    // setHeaderIsCollapsed(prevVal => !prevVal)
+  }, [])
 
   return (
     <Header

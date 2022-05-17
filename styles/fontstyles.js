@@ -1,11 +1,11 @@
 const fontstyles = {
   root: `
-    font-family: acuminpro, Helvetica, Arial, sans-serif;
+    font-family: "AcuminPro", Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
   `,
   title: `
-    font-family: balboabold, Helvetica, Arial, sans-serif;
+    font-family: "Balboa", Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
   `,

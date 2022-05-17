@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
+    "export": "rm -rf out && next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "mek": "rm -rf out && next build && next export && node leading-slash-removal.js && node archive-out.js"
+    "mek": "yarn export && node leading-slash-removal.js && node archive-out.js"
   },
   "dependencies": {
     "@types/react": "^18.0.8",
@@ -17,7 +17,7 @@
     "normalize.css": "^8.0.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-player": "^2.10.0",
+    "react-player": "2.10.0",
     "react-spring": "^9.4.5",
     "styled-components": "^5.3.5",
     "swiper": "^8.1.4",

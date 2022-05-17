@@ -7,7 +7,7 @@ import StationTitle from './components/StationTitle'
 const Wrap = styled.header`
   flex: 0 0 auto;
   width: 100%;
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
   margin: 0;
   z-index: 100;
@@ -55,7 +55,7 @@ const Header = ({
 }) => {
   return (
     <>
-      <StationTitle />
+      {/* <StationTitle /> */}
       <Wrap isHidden={isHidden}>
         <Background
           ref={backgroundRef}

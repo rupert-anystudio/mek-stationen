@@ -243,10 +243,10 @@ const props = {
             en: 'Jo-Ann Morgan, Professor of African American Studies and Art History, goes into the context of this photo and its meaning:'
           }
         },
-        {
-          type: 'video',
-          src: 'Film Kapitel 3 Sessel Symbol 1 dt UTs.mp4',
-        },
+        // {
+        //   type: 'video',
+        //   src: 'Film Kapitel 3 Sessel Symbol 1 dt UTs.mp4',
+        // },
         {
           type: 'text',
           value: {
@@ -370,7 +370,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+          value: {
+            de: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+            en: 'Film Kapitel 4 Koloniale 1 engl UTs.mp4',
+          }
         },
         {
           type: 'text',

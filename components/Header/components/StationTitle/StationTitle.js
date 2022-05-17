@@ -8,6 +8,13 @@ const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  font-size: 8vw;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: pre;
+  letter-spacing: -0.02em;
+  ${fontstyles.title}
 `
 
 const Center = styled.div`
@@ -38,8 +45,6 @@ const Title = styled.div`
 const Line = styled.div`
   position: relative;
   background: yellow;
-  font-size: 8vw;
-  line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
   white-space: pre;
@@ -48,44 +53,51 @@ const Line = styled.div`
   ${fontstyles.title}
 `
 
+const StationTitle = ({ parts = [], onTitleClick }) => {
 
-const LineTransition = ({ children, balanceX, value }) => {
-
-  const items = children
-    ? [{ key: value, value, balanceX }]
-    : []
-
-  const transitions = useTransition(items, {
-    keys: item => item.key,
-    initial: {
-      transform: 'translateX(500px) scale(1)',
-    },
-    from: {
-      transform: 'translateX(500px) scale(1)',
-    },
-    enter: {
-      transform: 'translateX(0%) scale(1)',
-    },
-    leave: {
-      transform: 'translateX(-500px) scale(1)',
-      position: 'absolute',
-    },
-    trail: 0,
+  const transitions = useTransition(parts, {
+    keys: part => part.key,
+    // initial: {
+    //   transform: p => `translateX(${500}px) translateY(${p.balanceY}px)`,
+    // },
+    // from: {
+    //   transform: `translateX(0px)`,
+    // },
+    config: { mass: 2, tension: 100, friction: 20 },
+    initial: item => ({
+      color: `rgba(0,0,0,0)`,
+    }),
+    from: item => ({
+      x: 300,
+      y: item.y,
+      color: `rgba(0,0,0,0)`,
+    }),
+    enter: item => ({
+      x: 0,
+      y: item.y,
+      color: `rgba(0,0,0,1)`,
+    }),
+    leave: item => ({
+      x: -300,
+      y: item.y,
+      color: `rgba(0,0,0,0)`,
+    }),
+    delay: 50,
+    trail: 120,
   })
 
-  return transitions((props, item) => (
-    <animated.div style={props}>
-      <Line style={{ transform: `translateX(${item.balanceX}px)` }}>
-        {item.value}
-      </Line>
-    </animated.div>
-  ))
-}
-
-const StationTitle = ({ parts = [], onTitleClick }) => {
   return (
-    <Wrap>
-      <Center>
+    <Wrap onClick={onTitleClick}>
+      {transitions((props, part) => (
+        <Center>
+          <animated.div style={props}>
+            <div>
+              {part.value}
+            </div>
+          </animated.div>
+        </Center>
+      ))}
+      {/* <Center>
         <Skew>
           <Title>
             {parts.map((part, i) => {
@@ -105,7 +117,7 @@ const StationTitle = ({ parts = [], onTitleClick }) => {
             })}
           </Title>
         </Skew>
-      </Center>
+      </Center> */}
     </Wrap>
   )
 }
