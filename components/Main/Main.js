@@ -7,6 +7,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  min-height: 100vh;
 `
 
 export default Main

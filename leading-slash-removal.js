@@ -5,10 +5,27 @@ const replace = require('replace-in-file')
 //   console.log(files)
 // })
 
+const replaceCss = () => {
+  const config = {
+    files: [
+      'out/**/*.css',
+    ],
+    from: /url\(\//g,
+    to: 'url('
+  }
+  replace(config)
+    .then(results => {
+      console.log('Replacement results:', results);
+    })
+    .catch(error => {
+      console.error('Error occurred:', error);
+    })
+}
+
 const replaceLinks = () => {
   const config = {
     files: [
-      'out/**/*.html'
+      'out/**/*.html',
     ],
     from: /href="\//g,
     to: 'href="'
@@ -16,6 +33,7 @@ const replaceLinks = () => {
   replace(config)
     .then(results => {
       console.log('Replacement results:', results);
+      // replaceCss()
     })
     .catch(error => {
       console.error('Error occurred:', error);

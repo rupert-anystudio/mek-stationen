@@ -1,21 +1,35 @@
 import { useState } from 'react'
-import langs from '../../lib/languages'
+import langs, { langKeys } from '../../lib/languages'
 import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'
 import translateGlobals from '../../lib/translateGlobals'
+import translateTitleParts from '../../lib/translateTitleParts'
 import AppContext from './AppContext'
+import useWindowScrollDirection from '../useWindowScrollDirection'
 
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
   const [currentLang, setCurrentLang] = useState(langs[0].key)
-  const [headerIsCollapsed, setHeaderIsCollapsed] = useState(false)
+  const [headerIsCollapsed, setHeaderIsCollapsed] = useState(true)
   const [headerIsHidden, setHeaderIsHidden] = useState(false)
 
-  const chaptersRaw = data?.chapters || []
+  // const titlePartsRaw = data?.titleParts || []
+  // const chaptersRaw = data?.chapters || []
   const assetFolder = data?.assetFolder || ''
-  const chapters = translateChapters(chaptersRaw, currentLang, assetFolder)
+  const titleParts = translateTitleParts((data?.titleParts || []), currentLang)
+  const chapters = translateChapters((data?.chapters || []), currentLang, assetFolder)
   const globals = translateGlobals(globalsRaw, currentLang)
-  
+
+  const scrollDir = useWindowScrollDirection()
+
+  const onLangCycle = () => {
+    const index = langKeys.indexOf(currentLang)
+    const nextIndex = index + 1 >= langKeys.length ? 0 : index + 1
+    console.log('onLangCycle',index, nextIndex)
+    const nextLang = langKeys[nextIndex]
+    setCurrentLang(nextLang)
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -30,6 +44,9 @@ const AppContextProvider = ({ children, data }) => {
         setHeaderIsCollapsed,
         headerIsHidden,
         setHeaderIsHidden,
+        scrollDir,
+        titleParts,
+        onLangCycle,
       }}
     >
       {children}

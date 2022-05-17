@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import ChapterSelect from './ChapterSelect'
-import HeaderCollapsedToggle from './HeaderCollapsedToggle'
-import HeaderHiddenToggle from './HeaderHiddenToggle'
+import ChapterSelect from './components/ChapterSelect'
+import HeaderCollapsedToggle from './components/HeaderCollapsedToggle'
+import HeaderHiddenToggle from './components/HeaderHiddenToggle'
+import ScrollDirectionDisplay from './components/ScrollDirectionDisplay'
 
-// const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development'
 
 const Wrap = styled.div`
   position: fixed;
@@ -27,13 +28,14 @@ const Content = styled.div`
 `
 
 const Devbar = () => {
-  // if (!isDev) return null
+  if (!isDev) return null
   return (
     <Wrap>
       <Content>
         <ChapterSelect />
         <HeaderHiddenToggle />
         <HeaderCollapsedToggle />
+        <ScrollDirectionDisplay />
       </Content>
     </Wrap>
   )
