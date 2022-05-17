@@ -17,8 +17,8 @@ const props = {
     {
       titleParts: {
         de: [
-          { offset: .8, value: 'spankorb-' },
-          { offset: 0, value: 'herstellunger im' },
+          { offset: .8, value: 'Spankorb-' },
+          { offset: 0, value: 'herstellung im' },
           { offset: 2.8, value: 'Erzgebirge' },
         ],
         en: [
@@ -108,6 +108,7 @@ const props = {
           type: 'video',
           value: {
             de: 'Film Kapitel 2 Span 1.mp4',
+            en: 'Film Kapitel 2 Span 1.mp4',
           }
         },
       ]
@@ -166,7 +167,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 3 Span 1.mp4',
+          value: {
+            de: 'Film Kapitel 3 Span 1.mp4',
+            en: 'Film Kapitel 3 Span 1.mp4',
+          }
         },
       ]
     },
@@ -224,7 +228,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 4 Span 1 dt UTs.mp4',
+          value: {
+            de: 'Film Kapitel 4 Span 1 dt UTs.mp4',
+            en: 'Film Kapitel 4 Span 1 engl UTs.mp4',
+          }
         },
         {
           type: 'quote',
@@ -287,7 +294,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 5 Span 1.mp4',
+          value: {
+            de: 'Film Kapitel 5 Span 1.mp4',
+            en: 'Film Kapitel 5 Span 1.mp4',
+          }
         },
         {
           type: 'text',

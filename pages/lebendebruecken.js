@@ -66,7 +66,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 4 Lebende Arch 1 dt UTs.mp4',
+          value: {
+            de: 'Film Kapitel 1 Lebende Brücken 1 dt UTs.mp4',
+            en: 'Film Kapitel 1 Lebende Brücken 1 engl UTs.mp4',
+          }
         },
         {
           type: 'text',
@@ -164,10 +167,13 @@ const props = {
             en: 'Not all the villagers benefit from tourism, and nature and the bridges suffer as well.',
           },
         },
-        {
-          type: 'video',
-          src: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
-        },
+        // {
+        //   type: 'video',
+        //   value: {
+        //     de: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+        //     en: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+        //   }
+        // },
       ],
     },
     {
@@ -399,7 +405,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+          value: {
+            de: 'Film Kapitel 4 Lebende Arch 1 dt UTs.mp4',
+            de: 'Film Kapitel 4 Lebende Arch 1 engl UTs.mp4',
+          },
         },
         {
           type: 'text',

@@ -258,7 +258,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 3 Sessel Symbol 1 dt UTs.mp4',
+          value: {
+            de: 'Film Kapitel 3 Sessel Symbol 1 dt UTs.mp4',
+            en: 'Film Kapitel 3 Sessel Symbol 1 engl UTs.mp4',
+          }
         },
         {
           type: 'text',
@@ -400,7 +403,10 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+          value: {
+            de: 'Film Kapitel 4 Koloniale 1 dt UTs.mp4',
+            en: 'Film Kapitel 4 Koloniale 1 engl UTs.mp4',
+          }
         },
         {
           type: 'text',
