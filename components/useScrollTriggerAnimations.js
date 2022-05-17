@@ -15,7 +15,7 @@ const useScrollTriggerAnimations = () => {
         paragraph,
         {
           autoAlpha: 0,
-          y: 200,
+          y: 100,
         },
         {
           autoAlpha: 1,

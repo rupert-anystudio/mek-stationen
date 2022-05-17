@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-  padding: 0 0 23rem 0;
+  padding: 0 0 12rem 0;
   /* padding: 10rem 0; */
   position: relative;
   width: 100%;

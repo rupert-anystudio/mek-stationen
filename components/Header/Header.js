@@ -26,6 +26,7 @@ const Background = styled.div`
   background: white;
   border-bottom: 2px solid currentColor;
   pointer-events: auto;
+  height: 19rem;
 `
 
 const Content = styled.div`

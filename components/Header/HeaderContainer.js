@@ -39,12 +39,12 @@ const HeaderContainer = () => {
         { x: (index) => index * -110, duration: 0.5, ease: 'elastic.inOut(1, 0.75)' },
         '-=0.1'
       )
-      .fromTo(
-        backToStartRef.current,
-        { x: 0, autoAlpha: 1 },
-        { x: '130%', autoAlpha: 1, duration: 0.25 },
-        '-=0.35'
-      )
+      // .fromTo(
+      //   backToStartRef.current,
+      //   { x: 0, autoAlpha: 1 },
+      //   { x: '130%', autoAlpha: 1, duration: 0.25 },
+      //   '-=0.35'
+      // )
       // .fromTo(
       //   backgroundRef.current,
       //   { autoAlpha: 1 },
@@ -57,14 +57,14 @@ const HeaderContainer = () => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   if (scrollDir === 'DOWN') {
-  //     setHeaderIsCollapsed(true)
-  //   }
-  //   if (scrollDir === 'UP') {
-  //     setHeaderIsCollapsed(false)
-  //   }
-  // }, [scrollDir, setHeaderIsCollapsed])
+  useEffect(() => {
+    if (scrollDir === 'DOWN') {
+      setHeaderIsCollapsed(true)
+    }
+    if (scrollDir === 'UP') {
+      setHeaderIsCollapsed(false)
+    }
+  }, [scrollDir, setHeaderIsCollapsed])
 
   useEffect(() => {
     if (headerIsCollapsed) {
