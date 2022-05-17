@@ -106,7 +106,9 @@ const props = {
         },
         {
           type: 'video',
-          src: 'Film Kapitel 2 Span 1.mp4',
+          value: {
+            de: 'Film Kapitel 2 Span 1.mp4',
+          }
         },
       ]
     },

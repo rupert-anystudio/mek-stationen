@@ -139,7 +139,7 @@ const props = {
         ],
         en: [
           { offset: 0, value: 'Interconnections' },
-          { offset: 0, value: 'THROUGH TOURISM' },
+          { offset: 0, value: 'through tourism' },
         ],
       },
       content: [
@@ -174,11 +174,11 @@ const props = {
       titleParts: {
         de: [
           { offset: 0, value: 'Und in' },
-          { offset: 0, value: 'Europa' },
+          { offset: 0, value: 'Europa?' },
         ],
         en: [
           { offset: 0, value: 'And in' },
-          { offset: 0, value: 'Europe' },
+          { offset: 0, value: 'Europe?' },
         ],
       },
       content: [
@@ -332,11 +332,11 @@ const props = {
       titleParts: {
         de: [
           { offset: 0, value: 'Lebende Architektur heute:' },
-          { offset: 0, value: 'Bäume zu Bauten' },
+          { offset: 0, value: 'Bäume zu Bauten!' },
         ],
         en: [
-          { offset: 0, value: 'LIVING ARCHITECTURE TODAY:'},
-          { offset: 0, value: 'TREES TO BUILDINGS!' },
+          { offset: 0, value: 'Living architecture today:'},
+          { offset: 0, value: 'trees to buildings!' },
         ],
       },
       content: [
