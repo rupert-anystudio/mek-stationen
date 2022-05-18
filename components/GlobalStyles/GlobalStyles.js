@@ -28,6 +28,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     ${fontsizes.root}
     ${fontstyles.root}
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
   }
   #__next {
     position: relative;
