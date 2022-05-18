@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
-// import dynamic from 'next/dynamic'
-// const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
+import Stop from '../../../../../../svgs/Stop'
 import StaticStart from './components/StaticStart'
+import VolumeControl from './components/VolumeControl'
 
 const Wrap = styled.div`
   padding: 0;
@@ -15,15 +15,6 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
-
-const Stage = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: scale(0.7);
 `
 
 const Fixed = styled.div`
@@ -54,17 +45,25 @@ const Player = styled.div`
   overflow: hidden;
 `
 
+const PlayerOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: none;
+`
+
 const Controls = styled.div`
   flex: 0 0 auto;
   position: relative;
-  font-size: 4rem;
-  line-height: 1;
-  padding: 2rem 25rem;
+  padding: 3rem 10rem;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  line-height: 0;
 `
 
 const Video = ({
@@ -82,13 +81,12 @@ const Video = ({
   onVolumeDecrease,
 }) => (
   <Wrap>
-    <StaticStart onClick={onPlayPause} />
+    <StaticStart onClick={onPlayPause} image={`${src}.jpg`} />
     <Fixed style={{ display: isPlaying ? 'block' : 'none'}}>
       <FixedLayout>
         <Player>
           {isPlaying && (
             <ReactPlayer
-              // ref={playerRef}
               url={src}
               playing={isPlaying}
               width="100%"
@@ -99,18 +97,19 @@ const Video = ({
               onVolumeChange={onVolumeChange}
               onProgress={onProgress}
               onDuration={onDuration}
-              controls
+              controls={false}
               volume={volume / 100}
             />
           )}
+          <PlayerOverlay onClick={onPlayPause} />
         </Player>
         <Controls>
-          <span onClick={onPlayPause}>Stop</span>
-          <div>
-            <span>{`Vol: ${volume}`}</span>
-            <span onClick={onVolumeDecrease}>{`-`}</span>
-            <span onClick={onVolumeIncrease}>{`+`}</span>
-          </div>
+          <Stop onClick={onPlayPause} />
+          <VolumeControl
+            volume={volume}
+            onVolumeDecrease={onVolumeDecrease}
+            onVolumeIncrease={onVolumeIncrease}
+          />
         </Controls>
       </FixedLayout>
     </Fixed>

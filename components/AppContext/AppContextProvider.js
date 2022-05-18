@@ -8,7 +8,7 @@ import AppContext from './AppContext'
 import useWindowScrollDirection from '../useWindowScrollDirection'
 
 const volumeMax = 100
-const volumeIncrement = 25
+const volumeIncrement = 10
 
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
