@@ -65,7 +65,6 @@ const Video = ({
   isMounted,
 }) => (
   <Wrap>
-    Video
     {/* <Stage>
       <Controls>
         <span onClick={onPlayPause}>{playing ? 'Stop' : 'Play'}</span>
