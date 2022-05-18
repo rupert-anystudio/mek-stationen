@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import ChapterSelect from './components/ChapterSelect'
 import HeaderCollapsedToggle from './components/HeaderCollapsedToggle'
 import HeaderHiddenToggle from './components/HeaderHiddenToggle'
+import LangToggle from './components/LangToggle'
 import ScrollDirectionDisplay from './components/ScrollDirectionDisplay'
+import ShowIdleCoverToggle from './components/ShowIdleCover'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -12,7 +14,7 @@ const Wrap = styled.div`
   bottom: 0;
   left: 0;
   overflow: hidden;
-  z-index: 100;
+  z-index: 10000;
   background: rgba(0,0,0,0.8);
   color: white;
 `
@@ -35,6 +37,8 @@ const Devbar = () => {
         <ChapterSelect />
         <HeaderHiddenToggle />
         <HeaderCollapsedToggle />
+        <ShowIdleCoverToggle />
+        <LangToggle />
         <ScrollDirectionDisplay />
       </Content>
     </Wrap>

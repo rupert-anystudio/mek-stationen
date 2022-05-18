@@ -1,24 +1,18 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 import useAppContext from '../../../../../AppContext/useAppContext'
 import Video from './Video'
 
 const VideoContainer = ({ src }) => {
   const { volume, onVolumeDecrease, onVolumeIncrease } = useAppContext()
-  const [isOpen, setIsOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
 
-  const handleOpen = useCallback(() => {
-    console.log('onOpen')
-    setIsOpen(true)
-  }, [setIsOpen])
-
   const handlePlayPause = useCallback(() => {
-    console.log('onPlayPause')
+    // console.log('onPlayPause')
     setIsPlaying(prevVal => !prevVal)
   }, [setIsPlaying])
 
   const handleProgress = useCallback(state => {
-    console.log('onProgress', state)
+    // console.log('onProgress', state)
     // We only want to update time slider if we are not currently seeking
     // if (!this.state.seeking) {
     //   this.setState(state)
@@ -26,7 +20,7 @@ const VideoContainer = ({ src }) => {
   }, [])
 
   const handleDuration = useCallback(state => {
-    console.log('onDuration', state)
+    // console.log('onDuration', state)
     // We only want to update time slider if we are not currently seeking
     // if (!this.state.seeking) {
     //   this.setState(state)
@@ -34,22 +28,22 @@ const VideoContainer = ({ src }) => {
   }, [])
 
   const handleStart = useCallback(() => {
-    console.log('onStart')
+    // console.log('onStart')
     setIsPlaying(true)
   }, [setIsPlaying])
 
   const handleEnded = useCallback(() => {
-    console.log('onEnded')
+    // console.log('onEnded')
     setIsPlaying(false)
   }, [])
 
   const handlePause = useCallback(() => {
-    console.log('onPause')
+    // console.log('onPause')
     // setIsPlaying(false)
   }, [])
 
   const handleVolumeChange = useCallback((e) => {
-    console.log('onVolumeChange')
+    // console.log('onVolumeChange')
     // this.setState({ volume: parseFloat(e.target.value) })
   }, [])
 

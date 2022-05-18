@@ -24,7 +24,7 @@ const Fixed = styled.div`
   width: 100vw;
   height: 100vh;
   background: black;
-  z-index: 9000;
+  z-index: 9900;
   overflow: hidden;
 `
 

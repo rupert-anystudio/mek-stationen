@@ -38,9 +38,6 @@ const useScrollTriggerAnimations = () => {
     }
   }, [])
 
-  useEffect(() => {
-    console.log('useScrollTriggerAnimations')
-  }, [])
 }
 
 export default useScrollTriggerAnimations

@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import Chapters from '../components/Chapters'
 import AppContextProvider from '../components/AppContext/AppContextProvider'
 import Devbar from '../components/Devbar'
+import IdleCover from '../components/IdleCover'
 
 function MyApp({ Component, pageProps }) {
   const {
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Main>
       <Footer />
+      <IdleCover />
     </AppContextProvider>
   )
 }

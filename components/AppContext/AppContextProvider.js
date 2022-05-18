@@ -1,4 +1,5 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { useIdleTimer } from 'react-idle-timer'
 import langs, { langKeys } from '../../lib/languages'
 import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'
@@ -9,13 +10,35 @@ import useWindowScrollDirection from '../useWindowScrollDirection'
 
 const volumeMax = 100
 const volumeIncrement = 10
+const idleSeconds = 3
 
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
   const [currentLang, setCurrentLang] = useState(langs[0].key)
   const [headerIsCollapsed, setHeaderIsCollapsed] = useState(true)
   const [headerIsHidden, setHeaderIsHidden] = useState(false)
+  const [showIdleCover, setShowIdleCover] = useState(true)
   const [volume, setVolume] = useState(volumeMax)
+
+  const onIdle = useCallback(() => {
+    // console.log('onIdle')
+    setShowIdleCover(true)
+    window.scrollTo({ top: 0, left: 0 })
+  }, [])
+
+  useIdleTimer({
+    timeout: 1000 * idleSeconds,
+    startOnMount: true,
+    onIdle,
+  })
+
+  const scrollDir = useWindowScrollDirection()
+
+  useEffect(() => {
+    if (!showIdleCover) {
+      window.scrollTo({ top: 190, left: 0, behavior: 'smooth' })
+    }
+  }, [showIdleCover])
 
   const onVolumeDecrease = useCallback(() => {
     setVolume(vol => {
@@ -33,22 +56,17 @@ const AppContextProvider = ({ children, data }) => {
     })
   }, [setVolume])
 
-  // const titlePartsRaw = data?.titleParts || []
-  // const chaptersRaw = data?.chapters || []
   const assetFolder = data?.assetFolder || ''
   const titleParts = translateTitleParts((data?.titleParts || []), currentLang)
   const chapters = translateChapters((data?.chapters || []), currentLang, assetFolder)
   const globals = translateGlobals(globalsRaw, currentLang)
 
-  const scrollDir = useWindowScrollDirection()
-
-  const onLangCycle = () => {
+  const onLangCycle = useCallback(() => {
     const index = langKeys.indexOf(currentLang)
     const nextIndex = index + 1 >= langKeys.length ? 0 : index + 1
-    console.log('onLangCycle',index, nextIndex)
     const nextLang = langKeys[nextIndex]
     setCurrentLang(nextLang)
-  }
+  }, [setCurrentLang, currentLang])
 
   return (
     <AppContext.Provider
@@ -70,6 +88,8 @@ const AppContextProvider = ({ children, data }) => {
         volume,
         onVolumeDecrease,
         onVolumeIncrease,
+        showIdleCover,
+        setShowIdleCover,
       }}
     >
       {children}

@@ -88,7 +88,7 @@ const StationTitle = ({ parts = [], onTitleClick }) => {
 
   return (
     <Wrap onClick={onTitleClick}>
-      {transitions((props, part) => (
+      {/* {transitions((props, part) => (
         <Center>
           <animated.div style={props}>
             <div>
@@ -96,7 +96,7 @@ const StationTitle = ({ parts = [], onTitleClick }) => {
             </div>
           </animated.div>
         </Center>
-      ))}
+      ))} */}
       {/* <Center>
         <Skew>
           <Title>
