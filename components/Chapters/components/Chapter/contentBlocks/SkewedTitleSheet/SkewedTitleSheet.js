@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import fontstyles from '../../../../../../styles/fontstyles'
 
+import Scrollpfeil from '../../../../../../svgs/Scrollpfeil'
+
 const Wrap = styled.div`
   padding: 0;
   position: relative;
@@ -41,6 +43,13 @@ const Part = styled.div`
   ${fontstyles.title}
 `
 
+const ScrollIndicator = styled(Scrollpfeil)`
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+`
+
 const SkewedTitleSheet = ({ parts = [] }) => (
   <Wrap>
     <Center>
@@ -50,6 +59,7 @@ const SkewedTitleSheet = ({ parts = [] }) => (
         ))}
       </Skew>
     </Center>
+    <ScrollIndicator />
   </Wrap>
 )
 
