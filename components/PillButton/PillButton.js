@@ -10,7 +10,7 @@ const Wrap = styled.button`
   background: ${props => props.isActive ? 'black' : 'white'};
   color: ${props => props.isActive ? 'white' : 'black'};
   border: 2px solid black;
-  padding: 1rem 2rem;
+  padding: 1.1rem 2rem 0.9rem 2rem;
   border-radius: 2.4rem;
   cursor: pointer;
   font-size: 3.2rem;
