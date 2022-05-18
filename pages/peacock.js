@@ -126,7 +126,7 @@ const props = {
             en: 'Historical photographs do not always take into account whether the person depicted wanted to be recorded photographically. We do not wish to simply reproduce stereotyping images. Consequently, we have chosen to obscure the view of the person depicted here. By clicking on the image, you may decide whether you wish to see the photograph of the "Jail Bird in a Peacock Chair" in its entirety.',
           },
           coverImage: {
-            src: 'Kapitel 2 Wie alles A-cover.jpg',
+            src: 'Kapitel 2 Wie alles A_overlay.png',
           }
         },
         {
