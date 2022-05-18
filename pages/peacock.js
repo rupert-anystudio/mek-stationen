@@ -125,9 +125,7 @@ const props = {
             de: 'Historische Fotografien nehmen nicht immer Rücksicht darauf, ob die dargestellte Person fotografiert werden wollte. Wir wollen stereotypisierende Darstellungen nicht einfach reproduzieren. Deshalb haben wir uns dazu entschieden, den direkten Blick auf die dargestellte Person zu verdecken. Mit einem Klick auf das Bild können Sie entscheiden, ob Sie das Foto der „Gefangenen auf einem Pfauenthron“ ganz sehen.',
             en: 'Historical photographs do not always take into account whether the person depicted wanted to be recorded photographically. We do not wish to simply reproduce stereotyping images. Consequently, we have chosen to obscure the view of the person depicted here. By clicking on the image, you may decide whether you wish to see the photograph of the "Jail Bird in a Peacock Chair" in its entirety.',
           },
-          coverImage: {
-            src: 'Kapitel 2 Wie alles A_overlay.png',
-          }
+          coverImage: 'Kapitel 2 Wie alles A_overlay.png'
         },
         {
           type: 'text',
@@ -232,8 +230,6 @@ const props = {
               en: 'Huey P. Newton as “Minster of Defense”, first published as a photo in the magazine of the Black Panther Party on 15 May 1967',
             },
           },
-          value: null,
-          coverImage: null
         },
         {
           type: 'quote',

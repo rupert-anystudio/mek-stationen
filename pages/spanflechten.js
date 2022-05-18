@@ -241,14 +241,14 @@ const props = {
           },
         },
         {
-            type: 'fixed',
-            image: {
-              src: 'Foto Kapitel 4 Span D.jpg',
-              value: {
-                de: 'Anzeige aus der Deutschen Korbmacher Zeitung, 22. Juli 1926 (In: A. Martin (2010): Spankörbe aus dem Erzgebirge: Vom Nebenerwerb zum Wegbereiter dörflicher Industrialisierung, S. 51.).',
-                en: ' Advertisement from the Deutsche Korbmacher Zeitung, 22 July 1926 In: A. Martin (2010): Spankörbe aus dem Erzgebirge: Vom Nebenerwerb zum Wegbereiter dörflicher Industrialisierung, (Chip baskets from the Erzgebirge: from sideline to precursor of rural industrialisation) p. 51.',
-              },
+          type: 'fixed',
+          image: {
+            src: 'Foto Kapitel 4 Span D.jpg',
+            value: {
+              de: 'Anzeige aus der Deutschen Korbmacher Zeitung, 22. Juli 1926 (In: A. Martin (2010): Spankörbe aus dem Erzgebirge: Vom Nebenerwerb zum Wegbereiter dörflicher Industrialisierung, S. 51.).',
+              en: ' Advertisement from the Deutsche Korbmacher Zeitung, 22 July 1926 In: A. Martin (2010): Spankörbe aus dem Erzgebirge: Vom Nebenerwerb zum Wegbereiter dörflicher Industrialisierung, (Chip baskets from the Erzgebirge: from sideline to precursor of rural industrialisation) p. 51.',
             },
+          },
         },
         {
           type: 'text',

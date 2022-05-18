@@ -1,1 +1,1 @@
-export { default } from './Fixed'
+export { default } from './FixedContainer'
