@@ -6,7 +6,7 @@ const replaceCssUrl = () => {
       'out/**/*.css',
     ],
     from: /url\(\//g,
-    to: 'url('
+    to: 'url(../../../'
   }
   replace(config)
     .then(results => {

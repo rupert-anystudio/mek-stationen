@@ -1,35 +1,17 @@
-/* @font-face {
-  font-family: "Balboa";
-  src: local("Balboa"),
-      url("/fonts/Balboa-Bold.otf") format("otf"),
-      url("/fonts/Balboa-Bold.ttf") format("ttf");
-  font-weight: bolder;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Acumin Pro";
-  src: local("Acumin Pro"),
-      url("/fonts/AcuminPro-Medium.ttf") format("otf"),
-      url("/fonts/AcuminPro-Medium.ttf") format("ttf");
-  font-weight: bold;
-  font-style: normal;
-} */
-
 @font-face {
   font-family: 'Acumin Pro';
-  src: local("AcuminPro"),
-       url('/fonts/AcuminPro-Medium.otf') format('opentype');
+  src: local('AcuminPro'),
+       url('/fonts/AcuminPro-Medium.otf') format('opentype'),
+       url('/fonts/AcuminPro-Medium.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Balboa';
-  src: local("Balboa"),
-       url('/fonts/Balboa-Bold.otf') format('opentype');
-       /* url('/fonts/balboa-bold-webfont.woff2') format('woff2'),
-       url('/fonts/balboa-bold-webfont.woff') format('woff'); */
+  src: local('Balboa'),
+       url('/fonts/Balboa-Bold.otf') format('opentype'),
+       url('/fonts/Balboa-Bold.ttf')  format('truetype');
   font-weight: bold;
   font-style: normal;
 }
