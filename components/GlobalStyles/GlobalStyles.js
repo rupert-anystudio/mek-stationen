@@ -40,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    transform: translate3d(0,0,0);
+    /* transform: translate3d(0,0,0); */
   }
   a {
     color: inherit;
