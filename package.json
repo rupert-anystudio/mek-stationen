@@ -8,7 +8,8 @@
     "export": "rm -rf out && next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "mek": "yarn export && node leading-slash-removal.js"
+    "mek": "yarn export && node leading-slash-removal.js",
+    "svgs": "npx @svgr/cli -d svgs svgs --no-svgo"
   },
   "dependencies": {
     "@types/react": "^18.0.8",
@@ -24,6 +25,7 @@
     "use-resize-observer": "^8.0.0"
   },
   "devDependencies": {
+    "@svgr/cli": "6.2.1",
     "archiver": "^5.3.1",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.14.0",
