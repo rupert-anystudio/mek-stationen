@@ -67,8 +67,8 @@ const props = {
         {
           type: 'video',
           value: {
-            de: 'Film Kapitel 1 Lebende Brücken 1 dt UTs.mp4',
-            en: 'Film Kapitel 1 Lebende Brücken 1 engl UTs.mp4',
+            de: 'Film Kapitel 1 Lebende Bruecken 1 dt UTs.mp4',
+            en: 'Film Kapitel 1 Lebende Bruecken 1 engl UTs.mp4',
           }
         },
         {
