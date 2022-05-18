@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 // import dynamic from 'next/dynamic'
 // const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
+import StaticStart from './components/StaticStart'
 
 const Wrap = styled.div`
   padding: 0;
@@ -10,6 +11,10 @@ const Wrap = styled.div`
   height: 100vh;
   width: 100%;
   background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const Stage = styled.div`
@@ -25,77 +30,90 @@ const Fixed = styled.div`
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: black;
   z-index: 9000;
+  overflow: hidden;
+`
+
+const FixedLayout = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 `
 
 const Player = styled.div`
+  flex: 1;
   position: relative;
   width: 100%;
   background: black;
-  video {
-    aspect-ratio: 16 / 9;
-  }
+  overflow: hidden;
 `
 
 const Controls = styled.div`
+  flex: 0 0 auto;
   position: relative;
-  background: rgba(0,0,0,0.8);
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1;
-  padding: 1rem 0;
+  padding: 2rem 25rem;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 `
 
 const Video = ({
   src,
-  playing,
+  isPlaying,
   onPlayPause,
   onEnded,
   onPause,
   onVolumeChange,
-  onToggleMuted,
   onStart,
-  onStop,
   onProgress,
   onDuration,
-  onSeekChange,
-  isMounted,
+  volume,
+  onVolumeIncrease,
+  onVolumeDecrease,
 }) => (
   <Wrap>
-    {/* <Stage>
-      <Controls>
-        <span onClick={onPlayPause}>{playing ? 'Stop' : 'Play'}</span>
-      </Controls>
-    </Stage>
-    <Fixed style={{ display: playing ? 'block' : 'none'}}>
-      <Stage>
-        {isMounted && (
-          <ReactPlayer
-            // ref={playerRef}
-            wrapper={Player}
-            url={src}
-            playing={playing}
-            width="100%"
-            height="100%"
-            onEnded={onEnded}
-            onPause={onPause}
-            onStart={onStart}
-            onVolumeChange={onVolumeChange}
-            onToggleMuted={onToggleMuted}
-            onStop={onStop}
-            onProgress={onProgress}
-            onDuration={onDuration}
-            onSeekChange={onSeekChange}
-          />
-        )}
+    <StaticStart onClick={onPlayPause} />
+    <Fixed style={{ display: isPlaying ? 'block' : 'none'}}>
+      <FixedLayout>
+        <Player>
+          {isPlaying && (
+            <ReactPlayer
+              // ref={playerRef}
+              url={src}
+              playing={isPlaying}
+              width="100%"
+              height="100%"
+              onEnded={onEnded}
+              onPause={onPause}
+              onStart={onStart}
+              onVolumeChange={onVolumeChange}
+              onProgress={onProgress}
+              onDuration={onDuration}
+              controls
+              volume={volume / 100}
+            />
+          )}
+        </Player>
         <Controls>
-          <span onClick={onPlayPause}>{playing ? 'Stop' : 'Play'}</span>
+          <span onClick={onPlayPause}>Stop</span>
+          <div>
+            <span>{`Vol: ${volume}`}</span>
+            <span onClick={onVolumeDecrease}>{`-`}</span>
+            <span onClick={onVolumeIncrease}>{`+`}</span>
+          </div>
         </Controls>
-      </Stage>
-    </Fixed> */}
+      </FixedLayout>
+    </Fixed>
   </Wrap>
 )
 

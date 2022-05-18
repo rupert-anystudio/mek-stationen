@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import langs, { langKeys } from '../../lib/languages'
 import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'
@@ -12,6 +12,23 @@ const AppContextProvider = ({ children, data }) => {
   const [currentLang, setCurrentLang] = useState(langs[0].key)
   const [headerIsCollapsed, setHeaderIsCollapsed] = useState(true)
   const [headerIsHidden, setHeaderIsHidden] = useState(false)
+  const [volume, setVolume] = useState(100)
+
+  const onVolumeDecrease = useCallback(() => {
+    setVolume(vol => {
+      const newVol = vol - 10
+      if (newVol < 0) return 0
+      return newVol
+    })
+  }, [setVolume])
+
+  const onVolumeIncrease = useCallback(() => {
+    setVolume(vol => {
+      const newVol = vol + 10
+      if (newVol >= 100) return 100
+      return newVol
+    })
+  }, [setVolume])
 
   // const titlePartsRaw = data?.titleParts || []
   // const chaptersRaw = data?.chapters || []
@@ -47,6 +64,9 @@ const AppContextProvider = ({ children, data }) => {
         scrollDir,
         titleParts,
         onLangCycle,
+        volume,
+        onVolumeDecrease,
+        onVolumeIncrease,
       }}
     >
       {children}

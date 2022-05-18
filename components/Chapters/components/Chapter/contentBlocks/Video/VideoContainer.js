@@ -1,9 +1,16 @@
 import { useCallback, useEffect, useState } from 'react'
+import useAppContext from '../../../../../AppContext/useAppContext'
 import Video from './Video'
 
 const VideoContainer = ({ src }) => {
+  const { volume, onVolumeDecrease, onVolumeIncrease } = useAppContext()
+  const [isOpen, setIsOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
+
+  const handleOpen = useCallback(() => {
+    console.log('onOpen')
+    setIsOpen(true)
+  }, [setIsOpen])
 
   const handlePlayPause = useCallback(() => {
     console.log('onPlayPause')
@@ -25,20 +32,20 @@ const VideoContainer = ({ src }) => {
     //   this.setState(state)
     // }
   }, [])
-  
+
   const handleStart = useCallback(() => {
     console.log('onStart')
-    // this.setState({ playing: this.state.loop })
-  }, [])
-  
+    setIsPlaying(true)
+  }, [setIsPlaying])
+
   const handleEnded = useCallback(() => {
     console.log('onEnded')
-    // this.setState({ playing: this.state.loop })
+    setIsPlaying(false)
   }, [])
 
   const handlePause = useCallback(() => {
     console.log('onPause')
-    // this.setState({ playing: false })
+    // setIsPlaying(false)
   }, [])
 
   const handleVolumeChange = useCallback((e) => {
@@ -46,41 +53,20 @@ const VideoContainer = ({ src }) => {
     // this.setState({ volume: parseFloat(e.target.value) })
   }, [])
 
-  const handleToggleMuted = useCallback(() => {
-    console.log('onToggleMuted')
-    // this.setState({ muted: !this.state.muted })
-  }, [])
-
-  const handleStop = useCallback(() => {
-    console.log('onStop')
-    // this.setState({ url: null, playing: false })
-  }, [])
-
-  const handleSeekChange = useCallback(e => {
-    const seekVal = parseFloat(e.target.value)
-    console.log('isMounted', seekVal)
-    // this.setState({ played: parseFloat(e.target.value) })
-  }, [])
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [setIsMounted])
-
   return (
     <Video
       src={src}
-      playing={isPlaying}
+      isPlaying={isPlaying}
       onPlayPause={handlePlayPause}
       onEnded={handleEnded}
       onPause={handlePause}
       onVolumeChange={handleVolumeChange}
-      onToggleMuted={handleToggleMuted}
-      onStop={handleStop}
       onProgress={handleProgress}
       onStart={handleStart}
       onDuration={handleDuration}
-      onSeekChange={handleSeekChange}
-      isMounted={isMounted}
+      onVolumeDecrease={onVolumeDecrease}
+      onVolumeIncrease={onVolumeIncrease}
+      volume={volume}
     />
   )
 }
