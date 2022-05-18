@@ -12,13 +12,13 @@ const Wrap = styled.div`
   background: black;
   color: white;
   z-index: 9999;
+  cursor: pointer;
 `
 
 const StartButton = styled(CircleButton)`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  bottom: 10rem;
+  right: 10rem;
 `
 
 const IdleCover = () => {
@@ -32,9 +32,9 @@ const IdleCover = () => {
   if (!showIdleCover) return null
 
   return (
-    <Wrap>
+    <Wrap onClick={onStartClick}>
       <SkewedTitle parts={titleParts} />
-      <StartButton label={globals.idleCoverButton} onClick={onStartClick} />
+      <StartButton label={globals.idleCoverButton} />
     </Wrap>
   )
 }
