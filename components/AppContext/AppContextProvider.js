@@ -7,16 +7,19 @@ import translateTitleParts from '../../lib/translateTitleParts'
 import AppContext from './AppContext'
 import useWindowScrollDirection from '../useWindowScrollDirection'
 
+const volumeMax = 100
+const volumeIncrement = 25
+
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
   const [currentLang, setCurrentLang] = useState(langs[0].key)
   const [headerIsCollapsed, setHeaderIsCollapsed] = useState(true)
   const [headerIsHidden, setHeaderIsHidden] = useState(false)
-  const [volume, setVolume] = useState(100)
+  const [volume, setVolume] = useState(volumeMax)
 
   const onVolumeDecrease = useCallback(() => {
     setVolume(vol => {
-      const newVol = vol - 10
+      const newVol = vol - volumeIncrement
       if (newVol < 0) return 0
       return newVol
     })
@@ -24,8 +27,8 @@ const AppContextProvider = ({ children, data }) => {
 
   const onVolumeIncrease = useCallback(() => {
     setVolume(vol => {
-      const newVol = vol + 10
-      if (newVol >= 100) return 100
+      const newVol = vol + volumeIncrement
+      if (newVol >= volumeMax) return volumeMax
       return newVol
     })
   }, [setVolume])
