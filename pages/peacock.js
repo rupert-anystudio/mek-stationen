@@ -1,4 +1,4 @@
-const props = {
+export const props = {
   title: 'Peacock',
   assetFolder: 'peacock',
   titleParts: {

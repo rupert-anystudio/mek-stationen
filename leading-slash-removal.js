@@ -1,11 +1,6 @@
 const replace = require('replace-in-file')
 
-// const glob = require('glob')
-// glob(__dirname + '/out/**/*.html', {}, (err, files)=>{
-//   console.log(files)
-// })
-
-const replaceCss = () => {
+const replaceCssUrl = () => {
   const config = {
     files: [
       'out/**/*.css',
@@ -15,14 +10,14 @@ const replaceCss = () => {
   }
   replace(config)
     .then(results => {
-      console.log('Replacement results:', results);
+      console.log('replaceCssUrl:', results);
     })
     .catch(error => {
-      console.error('Error occurred:', error);
+      console.error('Error replaceCssUrl:', error);
     })
 }
 
-const replaceLinks = () => {
+const replaceHref = () => {
   const config = {
     files: [
       'out/**/*.html',
@@ -32,11 +27,11 @@ const replaceLinks = () => {
   }
   replace(config)
     .then(results => {
-      console.log('Replacement results:', results);
-      // replaceCss()
+      console.log('replaceHref:', results);
+      replaceCssUrl()
     })
     .catch(error => {
-      console.error('Error occurred:', error);
+      console.error('Error replaceHref:', error);
     })
 }
 
@@ -46,13 +41,11 @@ replace({
   ],
   from: /src="\//g,
   to: 'src="'
-  // from: /\/_next/g,
-  // to: '_next'
 })
   .then(results => {
-    console.log('Replacement results:', results);
-    replaceLinks()
+    console.log('replaceSrc:', results);
+    replaceHref()
   })
   .catch(error => {
-    console.error('Error occurred:', error);
+    console.error('Error replaceSrc:', error);
   })

@@ -1,4 +1,4 @@
-const props = {
+export const props = {
   title: 'Lebende Brücken',
   assetFolder: 'lebendebruecken',
   titleParts: {

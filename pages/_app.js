@@ -4,35 +4,105 @@ import '../styles/fontfaces.css'
 import GlobalStyles from '../components/GlobalStyles'
 import Header from '../components/Header'
 import Main from '../components/Main'
-import Footer from '../components/Footer'
 import Chapters from '../components/Chapters'
 import AppContextProvider from '../components/AppContext/AppContextProvider'
 import Devbar from '../components/Devbar'
 import IdleCover from '../components/IdleCover'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import PillButton from '../components/PillButton'
+import styled from 'styled-components'
 
-function MyApp({ Component, pageProps }) {
-  const {
-    chapters = [],
-    title = 'MEK Station',
-    assetFolder,
-    titleParts = [],
-  } = pageProps
+const stationRoutes = ['/peacock', '/lebendebruecken', '/spanflechten']
+
+const Layout = ({ children, withDevbar }) => {
   return (
-    <AppContextProvider data={{ chapters, assetFolder, titleParts }}>
-      <GlobalStyles />
+    <>
       <Head>
-        <title>{title}</title>
+        <title>{'MEK'}</title>
       </Head>
-      <Devbar />
-      <Header />
+      <GlobalStyles />
       <Main>
-        <Chapters />
-        <Component {...pageProps} />
+        {children}
       </Main>
-      <Footer />
-      <IdleCover />
+      {withDevbar && (
+        <Devbar />
+      )}
+    </>
+  )
+}
+
+const StationApp = ({ data }) => {
+  return (
+    <AppContextProvider data={data}>
+      <Layout withDevbar>
+        <Header />
+        <Chapters />
+        <IdleCover />
+      </Layout>
     </AppContextProvider>
   )
+}
+
+const InvalidRoute = ({ }) => {
+  return (
+    <>
+      Invalid Route
+    </>
+  )
+}
+
+const Root = styled.div`
+  background: black;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Stations = styled.div`
+  flex: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  > * {
+    margin: 1rem 0;
+    text-transform: uppercase;
+  }
+`
+
+const RootRoute = ({ pageProps = {} }) => {
+  const {
+    pages = {}
+  } = pageProps
+  const [station, setStation] = useState(null)
+  if (!station) return (
+    <Layout>
+      <Root>
+        <Stations>
+          {Object.keys(pages).map((key, i) => {
+            return <PillButton key={key} onClick={() => setStation(key)} label={`${i + 1}: ${key}`} />
+          })}
+        </Stations>
+      </Root>
+    </Layout>
+  )
+  return (
+    <StationApp data={pages[station]} />
+  )
+}
+
+function MyApp({ Component, pageProps }) {
+  const { pathname } = useRouter()
+  const isRoot = pathname === '/'
+  const isStation = stationRoutes.includes(pathname)
+  const isInvalid = !isStation && !isRoot
+  if (isInvalid) return <InvalidRoute />
+  if (isRoot) return <RootRoute pageProps={pageProps} />
+  return <StationApp data={pageProps} />
 }
 
 export default MyApp

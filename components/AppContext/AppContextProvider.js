@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useIdleTimer } from 'react-idle-timer'
+import { useRouter } from 'next/router'
 import langs, { langKeys } from '../../lib/languages'
 import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'

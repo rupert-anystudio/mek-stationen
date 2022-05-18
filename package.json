@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "mek": "yarn export && node leading-slash-removal.js",
+    "zip": "node archive-out.js",
     "svgs": "npx @svgr/cli -d svgs svgs --no-svgo"
   },
   "dependencies": {

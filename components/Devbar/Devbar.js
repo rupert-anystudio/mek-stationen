@@ -3,6 +3,7 @@ import ChapterSelect from './components/ChapterSelect'
 import HeaderCollapsedToggle from './components/HeaderCollapsedToggle'
 import HeaderHiddenToggle from './components/HeaderHiddenToggle'
 import LangToggle from './components/LangToggle'
+import ResetStation from './components/ResetStation'
 import ScrollDirectionDisplay from './components/ScrollDirectionDisplay'
 import ShowIdleCoverToggle from './components/ShowIdleCover'
 
@@ -40,6 +41,7 @@ const Devbar = () => {
         <ShowIdleCoverToggle />
         <LangToggle />
         <ScrollDirectionDisplay />
+        <ResetStation />
       </Content>
     </Wrap>
   )
