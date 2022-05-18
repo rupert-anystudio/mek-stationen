@@ -20,10 +20,10 @@ const Chapter = ({ titleParts, content, wrapRef, id }) => {
     <Wrap ref={wrapRef} id={id}>
       {titleParts.length > 0 && <SkewedTitleSheet parts={titleParts} />}
       {content.map(({ type, key, ...rest }) => {
-        // if (type === 'text') return <Text key={key} {...rest} />
-        // if (type === 'quote') return <Quote key={key} {...rest} />
-        // if (type === 'images') return <Images key={key} {...rest} />
-        // if (type === 'fixed') return <Fixed key={key} {...rest} />
+        if (type === 'text') return <Text key={key} {...rest} />
+        if (type === 'quote') return <Quote key={key} {...rest} />
+        if (type === 'images') return <Images key={key} {...rest} />
+        if (type === 'fixed') return <Fixed key={key} {...rest} />
         if (type === 'video') return <Video key={key} {...rest} />
         return null
       })}
