@@ -20,58 +20,60 @@ const Rail = styled.div`
   position: relative;
   background: black;
   width: 100%;
-  height: 200vh;
+  height: 300vh;
   padding: 0 0 0 0;
   margin: 0 0 -100vh 0;
 `
 
-const Sticky = styled.div`
+
+const Content = styled.div`
   position: sticky;
   top: 0;
   width: 100%;
   height: 100vh;
   background: black;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-`
-
-const ImageCol = styled.div`
-  height: auto;
-  width: 40rem;
-  position: relative;
+  align-items: stretch;
+  overflow: hidden;
   > div {
-    width: 100%;
     position: relative;
-    height: auto;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 2rem;
+    > div {
+      position: relative;
+      flex: 0 0 auto;
+      margin: 2rem 0;
+      color: white;
+      > img {
+        position: relative;
+        width: auto;
+        height: 70rem;
+        &.coverImage {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+      > span {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0;
+        width: 80%;
+        max-width: 140rem;
+        min-width: 90rem;
+        text-align: center;
+      }
+    }
   }
-  > span {
-    display: block;
-    text-align: center;
-    padding: 0 2rem;
-    margin: 1rem 0 0 0;
-  }
-`
-
-const TextCol = styled.div`
-  height: auto;
-  width: 40rem;
-  position: relative;
-  margin-left: 4rem;
-`
-
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-`
-
-const CoverImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 `
 
 const Fixed = ({
@@ -84,22 +86,24 @@ const Fixed = ({
   return (
     <Wrap ref={wrapperRef}>
       <Rail>
-        <Sticky>
-          <ImageCol onClick={onImageClick}>
+        <Content>
+          <div onClick={onImageClick}>
             <div>
-              <Image src={image.src} alt="" />
+              <img src={image.src} alt="" />
               {coverImage && showOverlay && (
-                <CoverImage src={coverImage.src} alt="" />
+                <img className='coverImage' src={coverImage.src} alt="" />
               )}
+              <span>{image.value}</span>
             </div>
-            <span>{image.value}</span>
-          </ImageCol>
+          </div>
           {coverImage?.value && (
-            <TextCol>
-              {coverImage?.value}
-            </TextCol>
+            <div style={{ maxWidth: 600 }}>
+              <div>
+                {coverImage?.value}
+              </div>
+            </div>
           )}
-        </Sticky>
+        </Content>
       </Rail>
     </Wrap>
   )

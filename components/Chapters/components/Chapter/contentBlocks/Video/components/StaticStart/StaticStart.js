@@ -12,7 +12,7 @@ const StaticStartWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: scale(0.6);
+  transform: scale(0.75);
   color: white;
   img {
     position: absolute;

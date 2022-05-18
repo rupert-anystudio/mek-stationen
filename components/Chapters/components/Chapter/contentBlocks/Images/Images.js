@@ -8,7 +8,7 @@ const Wrap = styled.div`
   position: relative;
   display: block;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   margin: 0 0 17rem 0;
   background: white;
   .swiper {
