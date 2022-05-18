@@ -10,7 +10,6 @@ const Wrap = styled.div`
   height: 100vh;
   width: 100%;
   background: black;
-  z-index: 100;
 `
 
 const Stage = styled.div`
@@ -20,6 +19,16 @@ const Stage = styled.div`
   right: 0;
   bottom: 0;
   transform: scale(0.7);
+`
+
+const Fixed = styled.div`
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9000;
 `
 
 const Player = styled.div`
@@ -56,30 +65,38 @@ const Video = ({
   isMounted,
 }) => (
   <Wrap>
-    <Stage>
-      {isMounted && (
-        <ReactPlayer
-          // ref={playerRef}
-          wrapper={Player}
-          url={src}
-          playing={playing}
-          width="100%"
-          height="100%"
-          onEnded={onEnded}
-          onPause={onPause}
-          onStart={onStart}
-          onVolumeChange={onVolumeChange}
-          onToggleMuted={onToggleMuted}
-          onStop={onStop}
-          onProgress={onProgress}
-          onDuration={onDuration}
-          onSeekChange={onSeekChange}
-        />
-      )}
+    Video
+    {/* <Stage>
       <Controls>
         <span onClick={onPlayPause}>{playing ? 'Stop' : 'Play'}</span>
       </Controls>
     </Stage>
+    <Fixed style={{ display: playing ? 'block' : 'none'}}>
+      <Stage>
+        {isMounted && (
+          <ReactPlayer
+            // ref={playerRef}
+            wrapper={Player}
+            url={src}
+            playing={playing}
+            width="100%"
+            height="100%"
+            onEnded={onEnded}
+            onPause={onPause}
+            onStart={onStart}
+            onVolumeChange={onVolumeChange}
+            onToggleMuted={onToggleMuted}
+            onStop={onStop}
+            onProgress={onProgress}
+            onDuration={onDuration}
+            onSeekChange={onSeekChange}
+          />
+        )}
+        <Controls>
+          <span onClick={onPlayPause}>{playing ? 'Stop' : 'Play'}</span>
+        </Controls>
+      </Stage>
+    </Fixed> */}
   </Wrap>
 )
 
