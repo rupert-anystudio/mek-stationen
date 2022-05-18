@@ -223,7 +223,7 @@ const props = {
           type: 'video',
           value: {
             de: 'Film Kapitel 4 Span 1 dt UTs.mp4',
-            en: 'Film Kapitel 4 Span 1 engl UTs.mp4',
+            en: 'Film Kapitel 4 Span 1 en UTs.mp4',
           }
         },
         {

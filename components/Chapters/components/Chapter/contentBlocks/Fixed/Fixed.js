@@ -21,7 +21,7 @@ const Rail = styled.div`
   width: 100%;
   height: 200vh;
   padding: 0 0 0 0;
-  margin: 0 0 -50vh 0;
+  margin: 0 0 -100vh 0;
 `
 
 const Sticky = styled.div`

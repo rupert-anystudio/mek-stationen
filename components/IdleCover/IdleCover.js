@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useAppContext } from '../AppContext'
 import CircleButton from '../CircleButton/CircleButton'
+import SkewedTitle from '../SkewedTitle'
 
 const Wrap = styled.div`
   position: fixed;
@@ -9,6 +10,7 @@ const Wrap = styled.div`
   width: 100%;
   height: 100%;
   background: black;
+  color: white;
   z-index: 9999;
 `
 
@@ -20,7 +22,7 @@ const StartButton = styled(CircleButton)`
 `
 
 const IdleCover = () => {
-  const { showIdleCover, setShowIdleCover, globals } = useAppContext()
+  const { showIdleCover, setShowIdleCover, globals, titleParts } = useAppContext()
 
   const onStartClick = e => {
     e.preventDefault()
@@ -31,6 +33,7 @@ const IdleCover = () => {
 
   return (
     <Wrap>
+      <SkewedTitle parts={titleParts} />
       <StartButton label={globals.idleCoverButton} onClick={onStartClick} />
     </Wrap>
   )

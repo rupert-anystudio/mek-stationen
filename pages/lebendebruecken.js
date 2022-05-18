@@ -331,13 +331,15 @@ const props = {
       titleParts: {
         de: [
           { offset: 0, value: 'Lebende' },
-          { offset: 0, value: 'Architektur heute:' },
-          { offset: 0, value: 'Bäume zu Bauten!' },
+          { offset: 0, value: 'Architektur' },
+          { offset: 0, value: 'heute: Bäume zu' },
+          { offset: 0, value: 'Bauten!' },
         ],
         en: [
           { offset: 0, value: 'Living'},
-          { offset: 0, value: 'architecture today:'},
-          { offset: 0, value: 'trees to buildings!' },
+          { offset: 0, value: 'architecture'},
+          { offset: 0, value: 'today: trees to'},
+          { offset: 0, value: 'buildings!' },
         ],
       },
       content: [

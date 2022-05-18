@@ -10,7 +10,7 @@ import useWindowScrollDirection from '../useWindowScrollDirection'
 
 const volumeMax = 100
 const volumeIncrement = 10
-const idleSeconds = 3
+const idleSeconds = 60 * 5 // 5 Mins
 
 const AppContextProvider = ({ children, data }) => {
   const [chapterIndex, setChapterIndex] = useState(0)
@@ -23,7 +23,7 @@ const AppContextProvider = ({ children, data }) => {
   const onIdle = useCallback(() => {
     // console.log('onIdle')
     setShowIdleCover(true)
-    window.scrollTo({ top: 0, left: 0 })
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [])
 
   useIdleTimer({
@@ -35,9 +35,13 @@ const AppContextProvider = ({ children, data }) => {
   const scrollDir = useWindowScrollDirection()
 
   useEffect(() => {
-    if (!showIdleCover) {
-      window.scrollTo({ top: 190, left: 0, behavior: 'smooth' })
+    if (showIdleCover) {
+      setHeaderIsCollapsed(false)
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+      return
     }
+    setHeaderIsCollapsed(true)
+    window.scrollTo({ top: 190, left: 0, behavior: 'smooth' })
   }, [showIdleCover])
 
   const onVolumeDecrease = useCallback(() => {
