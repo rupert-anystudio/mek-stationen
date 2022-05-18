@@ -8,7 +8,7 @@ const props = {
       { offset: 2.6, value: 'Mengen' },
     ],
     en: [
-      { offset: 1.9, value: 'baskets' },
+      { offset: 1.9, value: 'Baskets' },
       { offset: 0, value: 'in vast' },
       { offset: 2.4, value: 'quantities' },
     ],
@@ -33,16 +33,16 @@ const props = {
           image: {
             src: 'Foto Kapitel 1 Span A.jpg',
             value: {
-              de: 'Korbflechterei in Schwarzenberg, 1929 © SLUB Dresden / Deutsche Fotothek / Ewald Basel',
-              en: 'Basketry work in Schwarzenberg, 1929 © SLUB Dresden / Deutsche Fotothek / Ewald Basel',
+              de: 'Kurt Preißler: Holzeinschlag am Schwartenberg, Erzgebirge (Kalenderblatt). 1960 © Staatliche Museen zu Berlin, Museum Europäischer Kulturen / Kurt Preißler',
+              en: 'Kurt Preißler: Wood Felling by the Schwartenberg, Erzgebirge (calendar page). 1960 © Staatliche Museen zu Berlin, Museum Europäischer Kulturen / Kurt Preißler',
             },
           },
         },
         {
           type: 'quote',
           value: {
-            de: 'Korbmacher beim Ziehen der Wickelspäne. Spankorbflechterei, Lauter, Erzgebirge, 1930 © SLUB Dresden / Deutsche Fotothek.',
-            en: 'Basket weaver shaping the winding canes. Chip basket weaving workshop, Lauter, Erzgebirge, 1930 © SLUB Dresden / Deutsche Fotothek / Arno Heinicke',
+            de: 'Bevor es Plastekisten gab, wurden Obst und Gemüse in Spankörben angeboten.',
+            en: 'Before there were plastic crates, fruit and vegetables were transported and sold in chip baskets.',
           },
         },
         {
@@ -117,7 +117,7 @@ const props = {
       titleParts: {
         de: [
           { offset: 0, value: 'Vom Span' },
-          { offset: 0, value: 'von zum Korb' },
+          { offset: 0, value: 'zum Korb' },
         ],
         en: [
           { offset: 0, value: 'From chip' },
@@ -130,13 +130,6 @@ const props = {
           value: {
             de: 'Das Herstellen des Korbbodens war früher meist Kinderarbeit, denn es wurde in unbequemer Haltung auf dem Boden ausgeführt. Für den Henkel war in der Mitte ein längerer Span einzuflechten. War der Boden fertig, wurde auf einer Holzform weitergeflochten bis man die Randhöhe erreichte.',
             en: `Making the basket bases was mainly children's work because it had to be done in an uncomfortable position on the floor. A longer chip had to be woven into the middle for the handle. When the base was finished, the weaving was continued around a wooden form until the height of the rim was reached. `,
-          },
-        },
-        {
-          type: 'text',
-          value: {
-            de: 'An den Stirnseiten der so entstehenden „Stöcke“ sind die Jahresringe gut zu erkennen. Aus diesen „Stöcken“ werden die Flechtspäne gewonnen. Die quer zu den Jahresringen abgelösten Schichten sind besonders stabil, man verwendet sie für den Boden. Sie werden Radialspan genannt. Wird der Span entlang eines Jahresrings abgelöst bezeichnet man ihn als Tangentialspan. Diesen verwendet man zum Ausflechten oder als Wickelspan. Mit dem Schnitzmesser wird jeder Jahresring einzeln eingeschnitten und anschließend vorsichtig mit der Hand abgelöst. Alle Flechtspäne müssen sofort verarbeitet werden. Trocknet der Flechtspan, wird er steif. Der Korb erhält dadurch jedoch erst seine Stabilität. Hier kann man sehen, wie dies geschieht:',
-            en: `The annual rings are clearly visible on the fronts of the resulting "sticks". It is from these "sticks" that the weaving chips are obtained. The layers detached transversely to the annual rings are particularly stable and are used for the basket’s base. They are called radial chips. If the chips are removed along the annual rings, they are called tangential chips. They are used for weaving or as wrapping chips. Each annual ring is cut individually with a carving knife and then carefully removed by hand. All the chips must be processed immediately. The wood shavings become stiff when they dry out. However, this is what gives the basket its stability. Here you can see how this happens:`,
           },
         },
         {
@@ -153,7 +146,7 @@ const props = {
               src: 'Foto Kapitel 3 Span B.jpg',
               value: {
                 de: `Korbmacher beim Ziehen der Wickelspäne. Spankorbflechterei, Lauter, Erzgebirge, 1930 © SLUB Dresden / Deutsche Fotothek `,
-                en: `Basket weaver shaping the winding canes. Chip basket weaving workshop, Lauter, Erzgebirge, 1930 © SLUB Dresden / Deutsche Fotothek / Arno Heinicke  `,
+                en: `Basket weaver shaping the winding canes. Chip basket weaving workshop, Lauter, Erzgebirge, 1930 © SLUB Dresden / Deutsche Fotothek / Arno Heinicke`,
               },
             },
           ]
@@ -223,7 +216,7 @@ const props = {
           type: 'text',
           value: {
             de: 'Der Kulturhistoriker Dr. Andreas Martin hat sich schon im Studium, in den 1980er-Jahren mit dem Spanflechten im Erzgebirge beschäftigt. Von ihm stammen seltene Filmaufnahmen dieses Handwerks. In seiner Dissertation untersuchte er ausführlich die Arbeitsbedingungen des hausindustriellen Spanflechtens. Hier berichtet er davon:',
-            en: 'Cultural historian Dr Andreas Martin studied chip weaving in the Erz Mountains during the 1980s and made rare film recordings of this craft. In his dissertation, he carried out a detailed examination of the working conditions for cottage-industry chip weaving. He reports on this here: ',
+            en: 'Cultural historian Dr Andreas Martin studied chip weaving in the Erz Mountains during the 1980s and made rare film recordings of this craft. In his dissertation, he carried out a detailed examination of the working conditions for cottage-industry chip weaving. He reports on this here:',
           },
         },
         {
@@ -288,7 +281,7 @@ const props = {
         {
           type: 'text',
           value: {
-            de: 'Die einzelnen Stränge werden dabei getackert, von Hand geflochten wird kaum noch. In Westfrankreich produziert die Firma Emballages Martin auf diese Art Spankörbe für Käse, Obst und Gemüse. Bis zu 80 Mitarbeiter*innen fällen die Pappelbäume, entfernen die Rinde, spalten das Holz und stellen bis zu acht Millionen Körbe pro Jahr her: ',
+            de: 'Die einzelnen Stränge werden dabei getackert, von Hand geflochten wird kaum noch. In Westfrankreich produziert die Firma Emballages Martin auf diese Art Spankörbe für Käse, Obst und Gemüse. Bis zu 80 Mitarbeiter*innen fällen die Pappelbäume, entfernen die Rinde, spalten das Holz und stellen bis zu acht Millionen Körbe pro Jahr her:',
             en: 'The individual strands are stapled together, and they are rarely woven by hand. In western France, the company Emballages Martin produces chip baskets for cheese, fruit and vegetables in this way. Up to 80 employees cut down the poplar trees, remove the bark, split the wood and manufacture up to eight million baskets per year:',
           },
         },
@@ -327,7 +320,7 @@ const props = {
           type: 'text',
           value: {
             de: `Die Korbwaren eines großen Möbelherstellers werden zum Beispiel in Cirebon, Indonesien gefertigt. Die Arbeiter*innen flechten entweder in Fabriken oder als kleine Subunternehmer*innen in Hausarbeit. 2015 veröffentlichte die Internationale Arbeitsorganisation ILO den Bericht „Employment Relationship and Working Conditions in an IKEA Rattan Supply Chain“. Demnach verdienen 55 % der Subunternehmer*innen weniger als den monatlichen Mindestlohn der Region (92 Dollar). Gleichzeitig ist dies für die meisten das einzige Haushaltseinkommen.  
-            Wieviel ist uns also ein handgeflochtener Korb heute Wert`,
+            Wieviel ist uns also ein handgeflochtener Korb heute Wert?`,
             de: `The wickerwork of one large furniture manufacturer is made in Cirebon, Indonesia, for example. The workers either weave in factories or as small subcontractors in home industry. In 2015, the International Labour Organization (ILO) published the report "Employment Relationship and Working Conditions in an IKEA Rattan Supply Chain". According to the report, 55% of subcontractors earn less than the monthly minimum wage in the region ($92). At the same time, for most of them, this is the only household income.  
             So how much is a hand-woven basket worth to us today?`,
           },

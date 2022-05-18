@@ -31,7 +31,7 @@ const props = {
           image: {
             src: 'Foto Kapitel 1 Lebende Brücken A.jpg',
             value: {
-              de: 'Lebende Brücke „Wah ÑiangÑiur” im Dorf Mawkyrnot, Pynursla; mit ca. 53 Meter die längste lebende Brücke der Welt, 2022\n©Morningstar Khongtaw, Point of View Production',
+              de: 'Lebende Brücke „Wah ÑiangÑiur“ im Dorf Mawkyrnot, Pynursla; mit ca. 53 Meter die längste lebende Brücke der Welt, 2022 © Morningstar Khongtaw, Point of View Production',
               en: 'Living Root Bridge “Wah ÑiangÑiur” in the village Mawkyrnot, Pynursla; at around 53 metres the longest living root bridge of the world, 2022 © Morningstar Khongtaw, Point of View Production',
             },
           },
@@ -60,8 +60,8 @@ const props = {
         {
           type: 'text',
           value: {
-            de: 'Die lebenden Brücken der Khasi und Jaintia im Bundesstaat Meghalaya in Nordostindien sind die bekanntesten ihrer Art. Dort werden die Luftwurzeln des Gummibaums (Ficus Elastica) zu Brücken verflochten. So können die Bewohner*innen auch während der starken Monsunregenfälle Flüsse überqueren. Die meisten der Brücken sind zwischen 6 und 20 Metern lang. Brücken aus totem Holz würden im tropischen Klima schnell faulen, Eisenbrücken rosten. Bauten aus lebendem Material hingegen verrotten nicht. Einige der über 70 bekannten Brücken sind mehrere hundert Jahre alt. Aber wie funktioniert der Bau der Brücken genau?',
-            en: 'The living bridges made by the Khasi and Jaintia people in the state of Meghalaya in north-east India are the best-known of their kind. There, the aerial roots of the rubber tree (ficus elastica) are interwoven to make bridges. This enables the inhabitants to cross rivers even during the heavy monsoon rains. Most of the bridges are between 6 and 20 metres long. Bridges made of dead wood would rot quickly in the tropical climate, and iron bridges would rust. Structures made of living material, on the other hand, do not rot. Some of the more than 70 known bridges are several hundred years old. But how exactly does the bridge construction work?',
+            de: 'Die lebenden Brücken der Khasi und Jaintia im Bundesstaat Meghalaya in Nordostindien sind die bekanntesten ihrer Art. Dort werden die Luftwurzeln des Gummibaums (Ficus Elastica) zu Brücken verflochten. So können die Bewohner*innen auch während der starken Monsunregenfälle Flüsse überqueren. Die meisten der Brücken sind zwischen 6 und 20 Metern lang. Brücken aus totem Holz würden im tropischen Klima schnell faulen, Eisenbrücken rosten. Bauten aus lebendem Material hingegen verrotten nicht. Einige der über 70 bekannten Brücken sind mehrere hundert Jahre alt. Aber wie funktioniert der Bau der Brücken genau? Morningstar Khongthaw von der Living Bridge Foundation in Meghalaya erklärt es:',
+            en: 'The living bridges made by the Khasi and Jaintia people in the state of Meghalaya in north-east India are the best-known of their kind. There, the aerial roots of the rubber tree (ficus elastica) are interwoven to make bridges. This enables the inhabitants to cross rivers even during the heavy monsoon rains. Most of the bridges are between 6 and 20 metres long. Bridges made of dead wood would rot quickly in the tropical climate, and iron bridges would rust. Structures made of living material, on the other hand, do not rot. Some of the more than 70 known bridges are several hundred years old. But how exactly does the bridge construction work? Morningstar Khongthaw of the Living Bridge Foundation in Meghalaya explains:',
           },
         },
         {
@@ -84,50 +84,50 @@ const props = {
             {
               src: 'Foto Kapitel 1 Lebende Brücken B.jpg',
               value: {
-                de: `Photogrammmetrie der lebenden Brücken\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
-                en: `Photogrammmetry of Living Root Bridges\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                de: `Photogrammmetrie der lebenden Brücken © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                en: `Photogrammmetry of Living Root Bridges © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
               },
             },
             {
               src: 'Foto Kapitel 1 Lebende Brücken C.jpg',
               value: {
-                de: `Photogrammmetrie der lebenden Brücken\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
-                en: `Photogrammmetry of Living Root Bridges\n© Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                de: `Photogrammmetrie der lebenden Brücken © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                en: `Photogrammmetry of Living Root Bridges © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
               },
             },
             {
               src: 'Foto Kapitel 1 Lebende Brücken D.jpg',
               value: {
-                de: `Zeichnungen der lebenden Brücken\n©Zeichnungen: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
-                en: `Drawings of Living Root Bridges\n©Drawings: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang, Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
+                de: `Zeichnungen der lebenden Brücken © Zeichnungen: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
+                en: `Drawings of Living Root Bridges © Drawings: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang, Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
               },
             },
             {
               src: 'Foto Kapitel 1 Lebende Brücken E.jpg',
               value: {
-                de: `Zeichnungen der lebenden Brücken\n©Zeichnungen: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang Supervision: Ferdinand Ludwig, Wilfrid Middleton `,
-                en: `Drawings of Living Root Bridges\n©Drawings: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang, Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
+                de: `Zeichnungen der lebenden Brücken © Zeichnungen: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang Supervision: Ferdinand Ludwig, Wilfrid Middleton `,
+                en: `Drawings of Living Root Bridges © Drawings: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang, Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
               },
             },
             {
               src: 'Foto Kapitel 1 Lebende Brücken F.jpg',
               value: {
-                de: `Zeichnungen der lebenden Brücken\n©Zeichnungen: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang Supervision: Ferdinand Ludwig, Wilfrid Middletone`,
-                en: `Drawings of Living Root Bridges\n©Drawings: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang, Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
+                de: `Zeichnungen der lebenden Brücken © Zeichnungen: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang Supervision: Ferdinand Ludwig, Wilfrid Middletone`,
+                en: `Drawings of Living Root Bridges © Drawings: Xiya Sun, Lin Zhang, Zhirui Zuo, Hongqiu Wang, Supervision: Ferdinand Ludwig, Wilfrid Middleton`,
               },
             },
             {
               src: 'Foto Kapitel 1 Lebende Brücken G.jpg',
               value: {
-                de: `Photogrammmetrie der lebenden Brücken\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
-                en: `Photogrammmetry of Living Root Bridges\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                de: `Photogrammmetrie der lebenden Brücken © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                en: `Photogrammmetry of Living Root Bridges © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
               },
             },
             {
               src: 'Foto Kapitel 1 Lebende Brücken H.jpg',
               value: {
-                de: `Photogrammmetrie der lebenden Brücken\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
-                en: `Photogrammmetry of Living Root Bridges\n©Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                de: `Photogrammmetrie der lebenden Brücken © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
+                en: `Photogrammmetry of Living Root Bridges © Image: Wilfrid Middleton (TUM/The Ove Arup Foundation)`,
               },
             },
           ],
@@ -199,14 +199,14 @@ const props = {
           type: 'text',
           value: {  
             de: 'Solche natürlich gewachsenen Weidenzäune sind nachhaltig. Bis zu 1,50 m hoch und mit viel Laub bewachsen bieten sie Tieren auf der Weide Schatten. Die Nüsse und das Laub der Hecken sind Futtermittel. Zudem dienen die dichten Hecken als Nistplätze für Vögel, Igel, Mäuse, Insekten sowie andere Tiere und tragen so zur Biodiversität bei.',
-            en: 'Such naturally grown willow fences are sustainable. Up to 1.50 m high and covered in plenty of foliage, they provide shade for pasture animals. The nuts and foliage of the hedges are fodder. In addition, the dense hedges serve as nesting sites for birds, hedgehogs, mice, insects and other animals, thus contributing to biodiversity. ',
+            en: 'Such naturally grown willow fences are sustainable. Up to 1.50 m high and covered in plenty of foliage, they provide shade for pasture animals. The nuts and foliage of the hedges are fodder. In addition, the dense hedges serve as nesting sites for birds, hedgehogs, mice, insects and other animals, thus contributing to biodiversity.',
           },
         },
         {
           type: 'text',
           value: {  
             de: 'Seit 2018 ist das Wissen darum, wie man diese Hecken baut, als Immaterielles Kulturerbe im Bundesverzeichnis der Deutschen UNESCO-Kommission anerkannt.',
-            en: 'Since 2018, knowledge of how to build these hedges has been recognised as Intangible Cultural Heritage in the Federal List of the German UNESCO commission. ',
+            en: 'Since 2018, knowledge of how to build these hedges has been recognised as Intangible Cultural Heritage in the Federal List of the German UNESCO commission.',
           },
         },
         {
@@ -215,28 +215,28 @@ const props = {
             {
               src: 'Foto Kapitel 3 In Europa A.jpg',
               value: {
-                de: `Beim Flechten einer Nieheimer Flechthecke\n©Heimatverein Nieheim e.V.`,
-                en: `Weaving a Nieheim woven hedge\n©Heimatverein Nieheim e.V.`,
+                de: `Beim Flechten einer Nieheimer Flechthecke © Heimatverein Nieheim e.V.`,
+                en: `Weaving a Nieheim woven hedge © Heimatverein Nieheim e.V.`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa B.jpg',
               value: {
-                de: `Detail eines gedrehten Weidezweigs\n©Heimatverein Nieheim e.V.`,
+                de: `Detail eines gedrehten Weidezweigs © Heimatverein Nieheim e.V.`,
                 en: `Detail of a twisted willow branch © Heimatverein Nieheim e.V.`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa C.jpg',
               value: {
-                de: `Flechthecke entlang der Oeyenhauser Straße in Nieheim\n©Heimatverein Nieheim e.V.`,
+                de: `Flechthecke entlang der Oeyenhauser Straße in Nieheim © Heimatverein Nieheim e.V.`,
                 en: `Woven hedge along Oeyenhauser Straße in Nieheim © Heimatverein Nieheim e.V.`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa D.jpg',
               value: {
-                de: `Flechthecke im LWL Freilichtmuseum Detmold\n©Heimatverein Nieheim e.V.`,
+                de: `Flechthecke im LWL Freilichtmuseum Detmold © Heimatverein Nieheim e.V.`,
                 en: `Woven hedge in LWL Open Air Museum Detmold © Heimatverein Nieheim e.V.`,
               },
             },
@@ -252,15 +252,8 @@ const props = {
         {
           type: 'text',
           value: {  
-            de: 'So entstehen Ebenen und Räume mit Fenster im Baum, auf denen zum Beispiel getanzt wurde. Sie standen früher im Dorfzentrum. Auch Gerichtsverhandlung konnten dort stattfinden.',
-            en: 'This creates levels and spaces with windows in the tree, where dancing took place, for example. They used to stand at the centre of a village. Court hearings could also take place there.',
-          },
-        },
-        {
-          type: 'text',
-          value: {  
-            de: 'In einigen Gemeinden wie Limmersdorf in Bayern oder Peesten gibt es auch heute noch Tanzlinden.',
-            en: 'In some communities, such as Limmersdorf or Peesten in Bavaria, there are still dance lime trees today.',
+            de: 'So entstehen Ebenen und Räume mit Fenster im Baum, auf denen zum Beispiel getanzt wurde. Sie standen früher im Dorfzentrum. Auch Gerichtsverhandlung konnten dort stattfinden.In einigen Gemeinden wie Limmersdorf in Bayern oder Peesten gibt es auch heute noch Tanzlinden.',
+            en: 'This creates levels and spaces with windows in the tree, where dancing took place, for example. They used to stand at the centre of a village. Court hearings could also take place there.In some communities, such as Limmersdorf or Peesten in Bavaria, there are still dance lime trees today.',
           },
         },
         {
@@ -269,28 +262,28 @@ const props = {
             {
               src: 'Foto Kapitel 3 In Europa E.jpg',
               value: {
-                de: `Postkarte der Tanzlinde Peesten und Wirtshaus, 1901\n©Förderkreis Tanzlinde Peesten`,
+                de: `Postkarte der Tanzlinde Peesten und Wirtshaus, 1901 © Förderkreis Tanzlinde Peesten`,
                 en: `Postcard of the dance lime tree and the inn in Peesten, 1901 © Förderkreis Tanzlinde Peesten`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa F.jpg',
               value: {
-                de: `Der Ahorn von Ratibor, Schlesien, 1893\n©Rainer Graefe`,
+                de: `Der Ahorn von Ratibor, Schlesien, 1893 © Rainer Graefe`,
                 en: `The maple of Ratibor, Silesia, 1893 © Rainer Graefe`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa G.jpg',
               value: {
-                de: `Tanzlinde Peesten nach einer Lithographie von Carl-August Lebschée, um 1850\n©Förderkreis Tanzlinde Peesten`,
+                de: `Tanzlinde Peesten nach einer Lithographie von Carl-August Lebschée, um 1850 © Förderkreis Tanzlinde Peesten`,
                 en: `Dance lime tree in Peesten based on a lithograph by Carl-August Lebschée, around 1850 ©Förderkreis Tanzlinde Peesten`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa H.jpg',
               value: {
-                de: `Tanzlinde auf dem Tempelhofer Feld, Berlin\n©Verena Schönhart`,
+                de: `Tanzlinde auf dem Tempelhofer Feld, Berlin © Verena Schönhart`,
                 en: ` Dance lime tree on Tempelhofer Feld, Berlin © Verena Schönhart
                 `,
               },
@@ -298,35 +291,35 @@ const props = {
             {
               src: 'Foto Kapitel 3 In Europa K.jpg',
               value: {
-                de: `Tanzlinde Peesten, 2018 Förderkreis\n©Tanzlinde Peesten`,
+                de: `Tanzlinde Peesten, 2018 Förderkreis © Tanzlinde Peesten`,
                 en: `Dance lime tree in Peesten, 2018 Förderkreis © Tanzlinde Peesten`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa L.jpg',
               value: {
-                de: `Tanzlinde in Langenstadt, um 1960\n©Rainer Graefe`,
+                de: `Tanzlinde in Langenstadt, um 1960 © Rainer Graefe`,
                 en: `Dance lime tree in Langenstadt, around 1960 © Rainer Graefe`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa M.jpg',
               value: {
-                de: ` Tanzlinde in Limmersdorf, um 2015\n©Rainer Graefe`,
+                de: ` Tanzlinde in Limmersdorf, um 2015 © Rainer Graefe`,
                 en: `Dance lime tree in Limmersdorf, around 2015 © Rainer Graefe`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa N.jpg',
               value: {
-                de: ` Tanzlinde in Isling, 2008\n©Rainer Graefe`,
+                de: ` Tanzlinde in Isling, 2008 © Rainer Graefe`,
                 en: `Dance lime tree in Isling, 2008 © Rainer Graefe`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa O.jpg',
               value: {
-                de: ` Tanzlinde in Sachsenbrunn, 2005\n©Rainer Graefe`,
+                de: ` Tanzlinde in Sachsenbrunn, 2005 © Rainer Graefe`,
                 en: `Dance lime tree in Sachsenbrunn, 2005 © Rainer Graefe`,
               },
             },
@@ -337,11 +330,13 @@ const props = {
     {
       titleParts: {
         de: [
-          { offset: 0, value: 'Lebende Architektur heute:' },
+          { offset: 0, value: 'Lebende' },
+          { offset: 0, value: 'Architektur heute:' },
           { offset: 0, value: 'Bäume zu Bauten!' },
         ],
         en: [
-          { offset: 0, value: 'Living architecture today:'},
+          { offset: 0, value: 'Living'},
+          { offset: 0, value: 'architecture today:'},
           { offset: 0, value: 'trees to buildings!' },
         ],
       },
@@ -351,7 +346,7 @@ const props = {
           image: {
             src: 'Foto Kapitel 4 Lebende Arch A.jpg',
             value: {
-              de: 'Plane Tree Cube\n©Design und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)',
+              de: 'Plane Tree Cube © Design und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)',
               en: 'Plane Tree Cube © Design and images: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)',
             },
           },
@@ -369,28 +364,28 @@ const props = {
             {
               src: 'Foto Kapitel 4 Lebende Arch B.jpg',
               value: {
-                de: `Plane Tree Cube\n©Design und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
+                de: `Plane Tree Cube © Design und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
                 en: `Plane Tree Cube © Design and images: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
               },
             },
             {
               src: 'Foto Kapitel 4 Lebende Arch C.jpg',
               value: {
-                de: `Plane Tree Cube (Detail)\n©Design und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
+                de: `Plane Tree Cube (Detail) © Design und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
                 en: `Plane Tree Cube (detail) © Design and images: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
               },
             },
             {
               src: 'Foto Kapitel 4 Lebende Arch D.jpg',
               value: {
-                de: `Baubotanik Tower\n©Design und Realisierung: Ferdinand Ludwig, Cornelius Hackenbracht; Photos: Ferdinand Ludwig`,
+                de: `Baubotanik Tower © Design und Realisierung: Ferdinand Ludwig, Cornelius Hackenbracht; Photos: Ferdinand Ludwig`,
                 en: `Baubotanik Tower © Design and realization: Ferdinand Ludwig, Cornelius Hackenbracht; Photos: Ferdinand Ludwig`,
               },
             },
             {
               src: 'Foto Kapitel 3 In Europa D.jpg',
               value: {
-                de: `Baubotanik Tower (Detail)\n©Design und Realisierung: Ferdinand Ludwig, Cornelius Hackenbracht; Photos: Ferdinand Ludwig`,
+                de: `Baubotanik Tower (Detail) © Design und Realisierung: Ferdinand Ludwig, Cornelius Hackenbracht; Photos: Ferdinand Ludwig`,
                 en: `Baubotanik Tower (detail) © Design and realization: Ferdinand Ludwig, Cornelius Hackenbracht; Photos: Ferdinand Ludwig`,
               },
             },
@@ -423,15 +418,15 @@ const props = {
             {
               src: 'Foto Kapitel 4 Lebende Arch F.jpg',
               value: {
-                de: `Entwurf für das „Futurium”/House of Future\n©Design Und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
+                de: `Entwurf für das „Futurium”/House of Future © Design Und Bilder: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
                 en: `Design for the “Futurium”/House of Future © Design and images: OLA – Office for Living Architecture (Ferdinand Ludwig, Daniel Schönle, Jakob Rauscher)`,
               },
             },
             {
               src: 'Foto Kapitel 4 Lebende Arch G.jpg',
               value: {
-                de: `Der Bewohner Shri. phlatsing Khongmawloh auf der längsten lebenden Brücke der Welt „Wahniangniur“, 2022\n©Morningstar Khongtaw, Point of View Production`,
-                en: `The inhabitant Shri. phlatsing Khongmawloh on “Wahniangniur“, the longest living root bridge in the world, 2022 © Morningstar Khongtaw, Point of View Production `,
+                de: `Der Bewohner Shri. phlatsing Khongmawloh auf der längsten lebenden Brücke der Welt „Wahniangniur“, 2022 © Morningstar Khongtaw, Point of View Production`,
+                en: `The inhabitant Shri. phlatsing Khongmawloh on “Wahniangniur”, the longest living root bridge in the world, 2022 © Morningstar Khongtaw, Point of View Production `,
               },
             },
           ]
