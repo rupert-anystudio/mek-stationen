@@ -24,6 +24,7 @@ const Label = styled.div`
   padding: 1.1rem 0;
   white-space: pre;
   ${fontstyles.title}
+  min-width: 20rem;
 `
 
 const ChapterNav = ({ 

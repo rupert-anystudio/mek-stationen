@@ -1,19 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Images from './Images'
 
 const ImagesContainer = ({ images: imagesRaw }) => {
-  const [shownCaption, setShownCaption] = useState(null)
+  const [isMounted, setIsMounted] = useState(false)
+  const [shownCaption, setShownCaption] = useState(false)
 
   const images = imagesRaw.map((image, index) => ({
     ...image,
-    key: index,
-    showCaption: index === shownCaption,
-    onCaptionShowClick: () => setShownCaption(prevIndex => prevIndex === index ? null : index),
-    onCaptionHideClick: () => setShownCaption(null),
+    key: `image-${index}`,
+    showCaption: shownCaption,
+    onCaptionShowClick: () => setShownCaption(true),
+    onCaptionHideClick: () => setShownCaption(false),
   }))
 
+  useEffect(() => {
+    let timeout = setTimeout(() => setIsMounted(true), 2000)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
+
+  console.log('isMounted', isMounted)
+
   return (
-    <Images images={images} />
+    <Images images={images} isMounted={isMounted} />
   )
 }
 

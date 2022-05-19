@@ -6,6 +6,7 @@ const ChaptersContainer = () => {
   const { chapters } = useAppContext()
 
   useScrollTriggerAnimations()
+
   return (
     <Chapters chapters={chapters} />
   )

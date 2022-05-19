@@ -15,6 +15,7 @@ const Wrap = styled.div`
     width: 100%;
     height: 100%;
     padding: 0 5.6rem;
+    overflow: hidden;
   }
   .swiper-wrapper {
     width: 100%;
@@ -26,22 +27,28 @@ const Wrap = styled.div`
   }
 `
 
-const Images = ({ images }) => {
+const Images = ({ images, isMounted }) => {
   return (
     <Wrap>
-      <ReactSwiper
-        slidesPerView={'auto'}
-        spaceBetween={56}
-        centeredSlides
-        preloadImages
-        grabCursor
-      >
-        {images.map(image => (
-          <SwiperSlide key={image.key}>
-            <Item {...image} />
-          </SwiperSlide>
-        ))}
-      </ReactSwiper>
+      {isMounted && (
+        <ReactSwiper
+          slidesPerView={'auto'}
+          spaceBetween={56}
+          centeredSlides
+          preloadImages
+          grabCursor
+          initialSlide={0}
+          loop
+        >
+          {images.map(image => (
+            <SwiperSlide key={image.key}>
+              {({ isActive }) => (
+                <Item {...image} isActive={isActive} />
+              )}
+            </SwiperSlide>
+          ))}
+        </ReactSwiper>
+      )}
     </Wrap>
   )
 }

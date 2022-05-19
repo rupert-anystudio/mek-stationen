@@ -1,6 +1,7 @@
 // import Image from 'next/image'
 import styled from 'styled-components'
 import PillButton from '../../../../../../PillButton'
+import Cross from '../../../../../../../svgs/Cross'
 
 const Wrap = styled.div`
   height: 100%;
@@ -30,22 +31,30 @@ const CaptionButton = styled(PillButton)`
 const CaptionWrap = styled.div`
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 100%;
+  /* max-width: 80rem; */
   overflow: hidden;
   height: auto;
 `
 
 const Caption = styled.div`
   position: relative;
-  width: 100%;
   background: black;
   color: white;
-  padding: 1rem;
   border-radius: 1rem;
   margin: 1rem 0 0 0;
+  width: 100%;
   cursor: pointer;
-  white-space: pre-wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  span {
+    white-space: pre-wrap;
+    max-width: 90rem;
+  }
 `
 
 const Item = ({
@@ -57,16 +66,20 @@ const Item = ({
   captionRef,
   captionHeight,
   captionToggleLabel,
+  isActive,
 }) => {
   return (
     <Wrap>
       <CaptionWrap ref={captionRef}>
-        <Caption onClick={onCaptionHideClick}>{value}</Caption>
+        <Caption onClick={onCaptionHideClick}>
+          <span>{value}</span>
+          <Cross />
+        </Caption>
       </CaptionWrap>
-      <ImageWrap style={{ transform: `translateY(${showCaption ? -captionHeight : 0}px)` }}>
+      <ImageWrap style={{ transform: `translateY(${showCaption && isActive ? -captionHeight : 0}px)` }}>
         <Img src={src} />
         {/* <Image src={`/${src}`} layout='responsive' alt='' width={100} height={100} /> */}
-        {!showCaption && (
+        {!showCaption && isActive && (
           <CaptionButton
             label={captionToggleLabel}
             onClick={onCaptionShowClick}

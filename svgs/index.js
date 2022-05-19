@@ -1,3 +1,4 @@
+export { default as Cross } from "./Cross";
 export { default as Decrease } from "./Decrease";
 export { default as Increase } from "./Increase";
 export { default as Play } from "./Play";
