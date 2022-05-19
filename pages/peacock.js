@@ -25,8 +25,9 @@ export const props = {
         ],
         en: [
           { offset: .8, value: 'Does this' },
-          { offset: 0, value: 'chair look familiar' },
-          { offset: 2.8, value: 'to you?' },
+          { offset: 0, value: 'chair look' },
+          { offset: 2.8, value: 'familiar to' },
+          { offset: 2.8, value: 'you?' },
         ],
       },
       content: [

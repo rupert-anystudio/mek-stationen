@@ -18,8 +18,8 @@ export const props = {
       titleParts: {
         de: [
           { offset: .8, value: 'Spankorb-' },
-          { offset: 0, value: 'herstellung im' },
-          { offset: 2.8, value: 'Erzgebirge' },
+          { offset: 0, value: 'herstellung' },
+          { offset: 2.8, value: 'im Erzgebirge' },
         ],
         en: [
           { offset: .8, value: 'Chip basket' },
@@ -85,7 +85,8 @@ export const props = {
           { offset: 0, value: 'von Flechtspänen' },
         ],
         en: [
-          { offset: 0, value: 'Producing wood chips' },
+          { offset: 0, value: 'Producing' },
+          { offset: 0, value: 'wood chips' },
           { offset: 0, value: 'for weaving' },
         ],
       },
