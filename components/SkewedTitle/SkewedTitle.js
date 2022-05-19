@@ -12,8 +12,9 @@ const Wrap = styled.div`
   white-space: pre;
   letter-spacing: -0em;
   ${fontstyles.title}
-  font-size: 12vw;
-  line-height: 1;
+  /* font-size: 12vw; */
+  font-size: 21rem;
+  line-height: 0.9;
 `
 
 const Center = styled.div`
@@ -54,8 +55,8 @@ const SkewedTitle = ({ parts = [], className, style }) => {
           <TitleParts>
             {parts.map((part, i) => {
               const balanceX = gsap.utils.interpolate(
-                parts.length * -120,
-                parts.length * 120,
+                parts.length * -115,
+                parts.length * 115,
                 (i / (parts.length - 1))
               )
               return (

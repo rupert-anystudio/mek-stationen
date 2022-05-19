@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import BackToStart from './components/BackToStart'
+import BackToStart from '../BackToStart'
 import ChapterNav from './components/ChapterNav'
 import LanguageSwitch from './components/LanguageSwitch'
-// import StationTitle from './components/StationTitle'
 
 const Wrap = styled.header`
   width: 100%;
@@ -12,7 +11,7 @@ const Wrap = styled.header`
   /* transform: translateY(${props => props.isHidden ? -100 : 0}%);
   transition: transform 0.3s ease-in-out; */
   pointer-events: none;
-  height: auto;
+  height: 0;
   z-index: 1000;
 `
 
@@ -21,12 +20,11 @@ const Background = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 19rem;
   background: white;
   border-bottom: 2px solid currentColor;
   pointer-events: auto;
-  height: 19rem;
 `
 
 const Content = styled.div`

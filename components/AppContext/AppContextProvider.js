@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useIdleTimer } from 'react-idle-timer'
-import { useRouter } from 'next/router'
 import langs, { langKeys } from '../../lib/languages'
 import globalsRaw from '../../lib/globals'
 import translateChapters from '../../lib/translateChapters'
@@ -22,7 +21,6 @@ const AppContextProvider = ({ children, data }) => {
   const [volume, setVolume] = useState(volumeMax)
 
   const onIdle = useCallback(() => {
-    // console.log('onIdle')
     setShowIdleCover(true)
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [])
@@ -41,8 +39,6 @@ const AppContextProvider = ({ children, data }) => {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
       return
     }
-    setHeaderIsCollapsed(true)
-    window.scrollTo({ top: 190, left: 0, behavior: 'smooth' })
   }, [showIdleCover])
 
   const onVolumeDecrease = useCallback(() => {

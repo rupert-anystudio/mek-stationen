@@ -1,10 +1,12 @@
 import { forwardRef, useCallback } from 'react'
-import useAppContext from '../../../AppContext/useAppContext'
-import PillButton from '../../../PillButton'
+import useAppContext from '../AppContext/useAppContext'
+import CircleButton from '../CircleButton/CircleButton'
+import PillButton from '../PillButton'
 
 const BackToStart = ({
   className,
   style,
+  isCircle
 }, ref) => {
   const { globals } = useAppContext()
   const handleClick = useCallback(() => {
@@ -14,6 +16,17 @@ const BackToStart = ({
       behavior: 'smooth'
     })
   }, [])
+  if (isCircle) {
+    return (
+      <CircleButton
+        ref={ref}
+        label={globals.backToStartCircle}
+        className={className}
+        style={style}
+        onClick={handleClick}
+      />
+    )
+  }
   return (
     <PillButton
       ref={ref}
@@ -21,7 +34,6 @@ const BackToStart = ({
       className={className}
       style={style}
       onClick={handleClick}
-      href=''
     />
   )
 }

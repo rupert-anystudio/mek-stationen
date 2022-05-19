@@ -7,6 +7,7 @@ const Wrap = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 108rem;
   margin: 0 0 12rem 0;
   overflow: hidden;
   background: white;

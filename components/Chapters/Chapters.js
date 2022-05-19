@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Chapter from './components/Chapter'
+import Tail from './components/Tail'
 
 const Wrap = styled.div`
   margin: 0;
@@ -19,6 +20,7 @@ const Chapters = ({ chapters = [] }) => (
         />
       )
     })}
+    <Tail />
   </Wrap>
 )
 
