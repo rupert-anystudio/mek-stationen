@@ -404,7 +404,7 @@ export const props = {
           type: 'video',
           value: {
             de: 'Film Kapitel 4 Lebende Arch 1 dt UTs.mp4',
-            de: 'Film Kapitel 4 Lebende Arch 1 engl UTs.mp4',
+            en: 'Film Kapitel 4 Lebende Arch 1 engl UTs.mp4',
           },
         },
         {
