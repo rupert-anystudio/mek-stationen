@@ -9,7 +9,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     max-width: 1920px;
     max-height: 1080px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     position: relative;
