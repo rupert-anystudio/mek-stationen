@@ -33,3 +33,6 @@ yarn-error.log*
 
 out.zip
 */**/*.mp4
+/out-peacock/
+/out-lebendebruecken/
+/out-spanflechten/
